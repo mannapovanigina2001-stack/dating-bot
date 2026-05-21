@@ -1,0 +1,2402 @@
+[
+  {
+    "name": "Зулайхо",
+    "age": 28,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Ҳаётни севаман, кулгу ва яхши одамларни қадрлайман. Ёнимда доим куладиган, қўллаб-қувватлайдиган йигитни қидираман.",
+    "photo": "1.jpg"
+  },
+  {
+    "name": "Нилуфар",
+    "age": 19,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Tabiatni, tog'larni va uy taomlarini yaxshi ko'raman. Jiddiy munosabat izlayman.",
+    "photo": "2.jpg"
+  },
+  {
+    "name": "Мадина",
+    "age": 22,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Мен — оилапарвар қиз. Ширин уй, меҳрибон оила орзусидаман.",
+    "photo": "3.jpg"
+  },
+  {
+    "name": "Дилноза",
+    "age": 30,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Спорт билан шуғулланаман, йога ва сузишни яхши кўраман. Фаол ва бақувват йигитни қидираман.",
+    "photo": "4.jpg"
+  },
+  {
+    "name": "Сабина",
+    "age": 20,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Китоб ўқишни, мусиқа тинглашни яхши кўраман. Самимий муносабат истайман.",
+    "photo": "5.jpg"
+  },
+  {
+    "name": "Малика",
+    "age": 23,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Кулги менинг энг яхши дорим. Ҳаётни маза қилиб яшашни биладиган йигитни излайман.",
+    "photo": "6.jpg"
+  },
+  {
+    "name": "Шахло",
+    "age": 22,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Меҳмондўстман, хуш феълман. Оиласини ва дўстларини қадрлайдиган йигитни қидираман.",
+    "photo": "7.jpg"
+  },
+  {
+    "name": "Феруза",
+    "age": 26,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Таълим олишни ва янги нарсаларни ўрганишни яхши кўраман. Зиёли йигит излайман.",
+    "photo": "8.jpg"
+  },
+  {
+    "name": "Гулнора",
+    "age": 19,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Озода, меҳрибон ва самимийман. Ёнимда доим кулдирадиган йигитни орзу қиламан.",
+    "photo": "9.jpg"
+  },
+  {
+    "name": "Насиба",
+    "age": 30,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Саёҳат қилишни, янги жойларни кашф этишни яхши кўраман. Биргаликда дунёни кезгим келади.",
+    "photo": "10.jpg"
+  },
+  {
+    "name": "Барно",
+    "age": 27,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Musiqa va raqs mening hayotim. Birgalikda shodlik qilishni yaxshi ko'radigan yigitni izlayman.",
+    "photo": "11.jpg"
+  },
+  {
+    "name": "Мунира",
+    "age": 27,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Oilamni va do'stlarimni juda qadrlayman. Samimiy va mehribon yigit izlayman.",
+    "photo": "12.jpg"
+  },
+  {
+    "name": "Лола",
+    "age": 29,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Tabassumim bilan kunni yorqin qilaman. Yon-atrofimda ham shunday odam bo'lishini istayman.",
+    "photo": "13.jpg"
+  },
+  {
+    "name": "Камола",
+    "age": 23,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Oshpazlikni yaxshi ko'raman, yangi taomlar pishirishdan zavqlanaman. Birga dasturxon yozamizmi?",
+    "photo": "14.jpg"
+  },
+  {
+    "name": "Умида",
+    "age": 26,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Yoshligimdan orzularim ko'p. Ularni amalga oshirishga yordam beradigan yigitni kutaman.",
+    "photo": "15.jpg"
+  },
+  {
+    "name": "Зебо",
+    "age": 19,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Hayotga ijobiy qarash — mening shiorim. Siz ham shunday odamsiz degan umiddaman.",
+    "photo": "16.jpg"
+  },
+  {
+    "name": "Озода",
+    "age": 23,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Kitob o'qish va kino ko'rish — mening sevimli mashg'ulotlarim. Birgalikda muhokama qilamizmi?",
+    "photo": "17.jpg"
+  },
+  {
+    "name": "Мухаббат",
+    "age": 23,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Sevimli faslim — bahor. Sevimli rang — moviy. Sevimli odam — siz bo'lasiz balki?",
+    "photo": "18.jpg"
+  },
+  {
+    "name": "Хурмо",
+    "age": 18,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Sport va sog'lom turmush tarzi menga muhim. Siz ham shunday odam bo'lsangiz ajoyib.",
+    "photo": "19.jpg"
+  },
+  {
+    "name": "Наргиза",
+    "age": 27,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Mehribon, sabr-toqatli va samimiy yigitni izlayman. Munosabatlarda halollik muhim.",
+    "photo": "20.jpg"
+  },
+  {
+    "name": "Дилфуза",
+    "age": 30,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Kulgim yuqumli deyishadi. O'zingiz sinab ko'ring — yozing menga.",
+    "photo": "21.jpg"
+  },
+  {
+    "name": "Санобар",
+    "age": 18,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Orzularim katta, ko'nglim ochiq. Hayotni birga qurishga tayyor yigitni kutaman.",
+    "photo": "22.jpg"
+  },
+  {
+    "name": "Хилола",
+    "age": 23,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Gullarni, musiqani va yomg'irni yaxshi ko'raman. Siz-chi?",
+    "photo": "23.jpg"
+  },
+  {
+    "name": "Нозима",
+    "age": 25,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Yolg'izlikni emas, sifatli muloqotni yaxshi ko'raman. Chin do'st va sevgilini izlayman.",
+    "photo": "24.jpg"
+  },
+  {
+    "name": "Мафтуна",
+    "age": 26,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Ishda ham, hayotda ham maqsadli odamman. Yonimdagi ham shunday bo'lishini istayman.",
+    "photo": "25.jpg"
+  },
+  {
+    "name": "Таманно",
+    "age": 25,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Oilaparvarmang deb o'ylashadi meni. To'g'ri — bu mening kuchim.",
+    "photo": "26.jpg"
+  },
+  {
+    "name": "Зиёда",
+    "age": 27,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Tabiat bag'rida dam olishni va shahar shovqinidan uzoqlashishni yaxshi ko'raman.",
+    "photo": "27.jpg"
+  },
+  {
+    "name": "Гулбахор",
+    "age": 22,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Har kuni yangi narsa o'rganishga harakat qilaman. Birgalikda o'sishni xohlayman.",
+    "photo": "28.jpg"
+  },
+  {
+    "name": "Ширин",
+    "age": 18,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Do'stlarim menga ishonadi. Siz ham ishona olasiz — bu so'z.",
+    "photo": "29.jpg"
+  },
+  {
+    "name": "Сарвиноз",
+    "age": 20,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Quvnoq, faol va hayotsevar qizman. Meni baxtli qila oladigan yigitni izlayman.",
+    "photo": "30.jpg"
+  },
+  {
+    "name": "Анастасия",
+    "age": 29,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Люблю жизнь во всех её проявлениях. Ищу того, кто будет рядом и в радости, и в трудную минуту.",
+    "photo": "31.jpg"
+  },
+  {
+    "name": "Екатерина",
+    "age": 24,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Обожаю готовить, путешествовать и проводить время с близкими. Хочу настоящих отношений, без игр.",
+    "photo": "32.jpg"
+  },
+  {
+    "name": "Мария",
+    "age": 22,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Активная, позитивная, немного сумасшедшая — в хорошем смысле. Жду своего человека.",
+    "photo": "33.jpg"
+  },
+  {
+    "name": "Виктория",
+    "age": 22,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Читаю книги, хожу в кино и мечтаю побывать в разных странах. Ищу того, кто разделит мои интересы.",
+    "photo": "34.jpg"
+  },
+  {
+    "name": "Дарья",
+    "age": 28,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Говорят, у меня заразительный смех. Проверь сам — напиши мне.",
+    "photo": "35.jpg"
+  },
+  {
+    "name": "Полина",
+    "age": 24,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Работаю, развиваюсь, строю планы на будущее. Хочу рядом надёжного и целеустремлённого парня.",
+    "photo": "36.jpg"
+  },
+  {
+    "name": "Анна",
+    "age": 19,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Люблю уютные вечера дома и шумные компании одновременно. Умею находить баланс. Ты тоже?",
+    "photo": "37.jpg"
+  },
+  {
+    "name": "Ольга",
+    "age": 27,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Занимаюсь спортом, слежу за собой. Ищу того, кто ценит активный образ жизни.",
+    "photo": "38.jpg"
+  },
+  {
+    "name": "Елена",
+    "age": 23,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Мне важна честность и открытость в отношениях. Маски и игры — не моё.",
+    "photo": "39.jpg"
+  },
+  {
+    "name": "Наталья",
+    "age": 27,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Романтик по натуре, но с чувством юмора. Люблю сюрпризы и сама умею удивлять.",
+    "photo": "40.jpg"
+  },
+  {
+    "name": "Юлия",
+    "age": 25,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Путешествия, хорошая музыка и вкусный кофе — моя формула счастья. Добавь себя в неё.",
+    "photo": "41.jpg"
+  },
+  {
+    "name": "Ирина",
+    "age": 19,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Простая девчонка с непростыми мечтами. Ищу того, кто поможет их осуществить.",
+    "photo": "42.jpg"
+  },
+  {
+    "name": "Алина",
+    "age": 26,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Обожаю природу и загородные прогулки. Хочу парня, который не боится приключений.",
+    "photo": "43.jpg"
+  },
+  {
+    "name": "Кристина",
+    "age": 27,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Учусь, строю карьеру. Отношения — тоже в приоритете.",
+    "photo": "44.jpg"
+  },
+  {
+    "name": "Валерия",
+    "age": 26,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Добрая, внимательная, немного наивная — но это не слабость. Ценю искренность превыше всего.",
+    "photo": "45.jpg"
+  },
+  {
+    "name": "Александра",
+    "age": 30,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Смеюсь над собой и ситуацией. Без лишней драмы, но с характером.",
+    "photo": "46.jpg"
+  },
+  {
+    "name": "Татьяна",
+    "age": 22,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Мечтаю о большой семье и маленьком доме у леса. Ищу единомышленника.",
+    "photo": "47.jpg"
+  },
+  {
+    "name": "Светлана",
+    "age": 18,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Готовлю как бабушка, танцую как никто не видит. Жду того, кто оценит оба таланта.",
+    "photo": "48.jpg"
+  },
+  {
+    "name": "Ксения",
+    "age": 29,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Люблю котиков, кино и дождь за окном. Романтика в мелочах — это про меня.",
+    "photo": "49.jpg"
+  },
+  {
+    "name": "Маргарита",
+    "age": 20,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Умею слушать и слышать. Хочу того, кто умеет то же самое.",
+    "photo": "50.jpg"
+  },
+  {
+    "name": "Наталия",
+    "age": 21,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Люблю горы, рассветы и тихие вечера с чаем. Ищу того, кто разделит эти моменты.",
+    "photo": "51.jpg"
+  },
+  {
+    "name": "Людмила",
+    "age": 21,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Занимаюсь йогой и медитацией. Ищу гармоничного и спокойного человека.",
+    "photo": "52.jpg"
+  },
+  {
+    "name": "Галина",
+    "age": 19,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Обожаю цветы и всё живое. Хочу парня с добрым сердцем.",
+    "photo": "53.jpg"
+  },
+  {
+    "name": "Надежда",
+    "age": 20,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Самостоятельная, но умею принимать заботу. Жду того, кто умеет её давать.",
+    "photo": "54.jpg"
+  },
+  {
+    "name": "Любовь",
+    "age": 24,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Жизнь коротка для плохого настроения. Ищу того, кто это понимает.",
+    "photo": "55.jpg"
+  },
+  {
+    "name": "Жанна",
+    "age": 25,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Моё хобби — фотография. Хочу парня, который станет моей лучшей моделью.",
+    "photo": "56.jpg"
+  },
+  {
+    "name": "Вера",
+    "age": 21,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Люблю театр, выставки и музеи. Культурная жизнь важна для меня.",
+    "photo": "57.jpg"
+  },
+  {
+    "name": "Диана",
+    "age": 26,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Строгая к себе, добрая к другим. Ищу такого же.",
+    "photo": "58.jpg"
+  },
+  {
+    "name": "Яна",
+    "age": 28,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Мечтаю объездить весь мир. Нужен напарник для приключений.",
+    "photo": "59.jpg"
+  },
+  {
+    "name": "Карина",
+    "age": 22,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Живу полной жизнью и хочу, чтобы рядом был тот, кто это ценит.",
+    "photo": "60.jpg"
+  },
+  {
+    "name": "Регина",
+    "age": 19,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Умею превращать обычные дни в праздник. Ищу того, кому это понравится.",
+    "photo": "61.jpg"
+  },
+  {
+    "name": "Нина",
+    "age": 20,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Обожаю утренний кофе и вечерние прогулки. Ты составишь компанию?",
+    "photo": "62.jpg"
+  },
+  {
+    "name": "Лариса",
+    "age": 26,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Люблю детей и животных — это многое говорит о человеке. Что говорит о тебе?",
+    "photo": "63.jpg"
+  },
+  {
+    "name": "Тамара",
+    "age": 28,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Ценю тишину и глубокие разговоры. Поверхностность — не для меня.",
+    "photo": "64.jpg"
+  },
+  {
+    "name": "Инна",
+    "age": 18,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Спорт — моя религия. Ищу единоверца.",
+    "photo": "65.jpg"
+  },
+  {
+    "name": "Елизавета",
+    "age": 21,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Рисую, вяжу, пишу стихи. Творческая натура ищет свою половинку.",
+    "photo": "66.jpg"
+  },
+  {
+    "name": "Софья",
+    "age": 29,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Профессионал в своём деле и любитель в жизни. Ищу того, кто дополнит меня.",
+    "photo": "67.jpg"
+  },
+  {
+    "name": "Вероника",
+    "age": 23,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Не боюсь быть собой. Жду того, кто оценит это.",
+    "photo": "68.jpg"
+  },
+  {
+    "name": "Лидия",
+    "age": 28,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Смешная, нежная, упрямая. Всё зависит от настроения. Узнаешь меня?",
+    "photo": "69.jpg"
+  },
+  {
+    "name": "Алёна",
+    "age": 28,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Мой идеал — честный, добрый и с искрой в глазах. Ты такой?",
+    "photo": "70.jpg"
+  },
+  {
+    "name": "Ангелина",
+    "age": 30,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Хочу простого человеческого счастья. Думаю, ты тоже.",
+    "photo": "71.jpg"
+  },
+  {
+    "name": "Оксана",
+    "age": 23,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Каждый день стараюсь стать лучше. Ищу того, кто вдохновляет на это.",
+    "photo": "72.jpg"
+  },
+  {
+    "name": "Марина",
+    "age": 24,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Увлекаюсь кулинарией и часто экспериментирую. Готов попробовать?",
+    "photo": "73.jpg"
+  },
+  {
+    "name": "Варвара",
+    "age": 22,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Природа, горы, закаты — это моё. И ты мог бы стать моим.",
+    "photo": "74.jpg"
+  },
+  {
+    "name": "Арина",
+    "age": 27,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Весёлая в компании, нежная наедине. Узнай меня ближе.",
+    "photo": "75.jpg"
+  },
+  {
+    "name": "Лиза",
+    "age": 19,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Люблю планировать и воплощать мечты. Составишь список вместе со мной?",
+    "photo": "76.jpg"
+  },
+  {
+    "name": "Рита",
+    "age": 23,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Ищу не идеального, а искреннего. Разница большая.",
+    "photo": "77.jpg"
+  },
+  {
+    "name": "Даша",
+    "age": 25,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Умею ценить маленькие радости. Большие тоже не против.",
+    "photo": "78.jpg"
+  },
+  {
+    "name": "Соня",
+    "age": 28,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Говорят, от меня исходит тепло. Хочу подарить его одному человеку.",
+    "photo": "79.jpg"
+  },
+  {
+    "name": "Вика",
+    "age": 21,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Целеустремлённая и мечтательная одновременно. Это не противоречие — это я.",
+    "photo": "80.jpg"
+  },
+  {
+    "name": "Алиса",
+    "age": 22,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Люблю лето и ненавижу скуку. Ты умеешь удивлять?",
+    "photo": "81.jpg"
+  },
+  {
+    "name": "Эмма",
+    "age": 29,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Всё, что делаю — делаю с душой. Ищу такого же человека.",
+    "photo": "82.jpg"
+  },
+  {
+    "name": "Ника",
+    "age": 20,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Хожу на концерты, читаю стихи, влюбляюсь в города. Присоединишься?",
+    "photo": "83.jpg"
+  },
+  {
+    "name": "Агата",
+    "age": 27,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Ищу не принца, а партнёра. Вместе строить — это по-настоящему.",
+    "photo": "84.jpg"
+  },
+  {
+    "name": "Влада",
+    "age": 27,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Жизнерадостная, но умею быть серьёзной когда надо. Умею слышать и поддержать.",
+    "photo": "85.jpg"
+  },
+  {
+    "name": "Ева",
+    "age": 22,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Кофе, книга, плед — моё утро. А ты?",
+    "photo": "86.jpg"
+  },
+  {
+    "name": "Мила",
+    "age": 26,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Открытая к новому, верная старому. Так и в отношениях.",
+    "photo": "87.jpg"
+  },
+  {
+    "name": "Злата",
+    "age": 18,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Ищу того, с кем молчание не будет неловким.",
+    "photo": "88.jpg"
+  },
+  {
+    "name": "Элла",
+    "age": 22,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Мой смех слышен издалека. Надеюсь, тебе это понравится.",
+    "photo": "89.jpg"
+  },
+  {
+    "name": "Белла",
+    "age": 22,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Простые вещи делают меня счастливой. Быть одним из них — просто.",
+    "photo": "90.jpg"
+  },
+  {
+    "name": "Стелла",
+    "age": 20,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Романтика — не в словах, а в поступках. Согласен?",
+    "photo": "91.jpg"
+  },
+  {
+    "name": "Илона",
+    "age": 24,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Танцую, пою, хохочу. Жизнь — это праздник, если правильно настроиться.",
+    "photo": "92.jpg"
+  },
+  {
+    "name": "Роза",
+    "age": 24,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Серьёзная в работе, лёгкая в общении. Ищу баланс и в отношениях.",
+    "photo": "93.jpg"
+  },
+  {
+    "name": "Зоя",
+    "age": 29,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Мой мир полон красок. Хочу, чтобы ты стал одним из них.",
+    "photo": "94.jpg"
+  },
+  {
+    "name": "Рима",
+    "age": 22,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Хочу, чтобы нам было интересно вместе — через год, через десять лет.",
+    "photo": "95.jpg"
+  },
+  {
+    "name": "Лана",
+    "age": 20,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Умею радоваться мелочам и не драматизировать. Это ценно — правда?",
+    "photo": "96.jpg"
+  },
+  {
+    "name": "Тина",
+    "age": 30,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Ищу того, рядом с кем можно быть собой без страха.",
+    "photo": "97.jpg"
+  },
+  {
+    "name": "Нора",
+    "age": 29,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Строю жизнь по своим правилам. Готов сыграть по общим?",
+    "photo": "98.jpg"
+  },
+  {
+    "name": "Ада",
+    "age": 21,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Влюблена в море и запах дождя. И жду того, кто поймёт это без объяснений.",
+    "photo": "99.jpg"
+  },
+  {
+    "name": "Рина",
+    "age": 25,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Мечтательница с практичным умом. Интересное сочетание, правда?",
+    "photo": "100.jpg"
+  },
+  {
+    "name": "Зара",
+    "age": 27,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Говорят, я умею создавать уют из ничего. Проверь сам.",
+    "photo": "101.jpg"
+  },
+  {
+    "name": "Лейла",
+    "age": 22,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Обожаю сюрпризы и сама умею удивить. Попробуем?",
+    "photo": "102.jpg"
+  },
+  {
+    "name": "Жасмин",
+    "age": 28,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Оптимизм — мой выбор каждый день. Жду того, кто выбирает так же.",
+    "photo": "103.jpg"
+  },
+  {
+    "name": "Диля",
+    "age": 26,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Люблю глубокие разговоры о жизни. Есть, что рассказать?",
+    "photo": "104.jpg"
+  },
+  {
+    "name": "Зира",
+    "age": 19,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Ценю время — своё и чужое. Ищу того, кто думает так же.",
+    "photo": "105.jpg"
+  },
+  {
+    "name": "Лира",
+    "age": 22,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Скромная, но со своим мнением. Расскажи мне о себе?",
+    "photo": "106.jpg"
+  },
+  {
+    "name": "Дина",
+    "age": 20,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Живу настоящим, мечтаю о будущем. Поможешь его создать?",
+    "photo": "107.jpg"
+  },
+  {
+    "name": "Тая",
+    "age": 19,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Тёплая, заботливая, немного хаотичная. Зато никогда не скучно.",
+    "photo": "108.jpg"
+  },
+  {
+    "name": "Мая",
+    "age": 26,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Моя суперсила — находить хорошее в людях. Что хорошего в тебе?",
+    "photo": "109.jpg"
+  },
+  {
+    "name": "Тея",
+    "age": 20,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Люблю смотреть на звёзды и думать о большом. Составишь компанию?",
+    "photo": "110.jpg"
+  },
+  {
+    "name": "Нея",
+    "age": 21,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Без юмора — никуда. Умеешь смеяться над собой?",
+    "photo": "111.jpg"
+  },
+  {
+    "name": "Лея",
+    "age": 30,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Активная жизнь — мой выбор. Пешие прогулки, велосипед, горы — всё моё.",
+    "photo": "112.jpg"
+  },
+  {
+    "name": "Рея",
+    "age": 23,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Ищу того, кто будет рад видеть меня каждый день.",
+    "photo": "113.jpg"
+  },
+  {
+    "name": "Сея",
+    "age": 22,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Добрая душа в ищущем сердце. Просто и честно.",
+    "photo": "114.jpg"
+  },
+  {
+    "name": "Фея",
+    "age": 22,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Хочу настоящего — без масок, без сценариев. Просто мы.",
+    "photo": "115.jpg"
+  },
+  {
+    "name": "Хея",
+    "age": 27,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Обожаю весну и начало всего нового. Может, и нас?",
+    "photo": "116.jpg"
+  },
+  {
+    "name": "Аея",
+    "age": 23,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Влюблена в жизнь. Не хватает только тебя.",
+    "photo": "117.jpg"
+  },
+  {
+    "name": "Бея",
+    "age": 28,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Сильная, но умею быть нежной. Ищу того, кто это заметит.",
+    "photo": "118.jpg"
+  },
+  {
+    "name": "Вея",
+    "age": 20,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Каждое утро начинаю с улыбки. Хочу, чтобы ты стал её причиной.",
+    "photo": "119.jpg"
+  },
+  {
+    "name": "Гея",
+    "age": 28,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Свободолюбивая, но верная. Не противоречие — это я.",
+    "photo": "120.jpg"
+  },
+  {
+    "name": "Дея",
+    "age": 29,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Обожаю смотреть старые фильмы и слушать живую музыку. Ты со мной?",
+    "photo": "121.jpg"
+  },
+  {
+    "name": "Иея",
+    "age": 22,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Ищу не половинку — ищу целого человека рядом. Ты такой?",
+    "photo": "122.jpg"
+  },
+  {
+    "name": "Кея",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Готовлю вкусно, обнимаю крепко, люблю искренне.",
+    "photo": "123.jpg"
+  },
+  {
+    "name": "Мея",
+    "age": 24,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Жизнь прекрасна, когда есть кто-то рядом. Ищу этого кого-то.",
+    "photo": "124.jpg"
+  },
+  {
+    "name": "Оея",
+    "age": 26,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Немного интроверт, много тепла. Если ты разглядишь — будешь рад.",
+    "photo": "125.jpg"
+  },
+  {
+    "name": "Пея",
+    "age": 19,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Ценю верность и взаимоуважение больше всего. Это не много — это минимум.",
+    "photo": "126.jpg"
+  },
+  {
+    "name": "Тея",
+    "age": 26,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Хожу на рынок за свежими фруктами и смотрю на людей. Жизнь полна маленьких радостей.",
+    "photo": "127.jpg"
+  },
+  {
+    "name": "Уея",
+    "age": 28,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Умею слушать тишину и чувствовать настроение. Ищу того, кто оценит это.",
+    "photo": "128.jpg"
+  },
+  {
+    "name": "Цея",
+    "age": 28,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Читаю по книге в неделю. Готов конкурировать или хотя бы слушать рецензии?",
+    "photo": "129.jpg"
+  },
+  {
+    "name": "Эея",
+    "age": 22,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Провожу время с пользой и без сожаления. Хочу того же от отношений.",
+    "photo": "130.jpg"
+  },
+  {
+    "name": "Юея",
+    "age": 22,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Тихая снаружи, бурная внутри. Узнаешь — поймёшь.",
+    "photo": "131.jpg"
+  },
+  {
+    "name": "Яея",
+    "age": 26,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Ищу уют в человеке, а не в вещах. Ты можешь быть моим домом.",
+    "photo": "132.jpg"
+  },
+  {
+    "name": "Аия",
+    "age": 24,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Смелая в мечтах, осторожная в чувствах. Подожди — оно того стоит.",
+    "photo": "133.jpg"
+  },
+  {
+    "name": "Бия",
+    "age": 25,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Хочу парня, который гордится мной. Я стараюсь быть достойной этого.",
+    "photo": "134.jpg"
+  },
+  {
+    "name": "Вия",
+    "age": 27,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Моё сердце открыто, но не нараспашку. Заслужи — и всё будет.",
+    "photo": "135.jpg"
+  },
+  {
+    "name": "Гия",
+    "age": 27,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Улыбаюсь незнакомцам и помогаю старушкам. Старомодно? Мне нравится.",
+    "photo": "136.jpg"
+  },
+  {
+    "name": "Дия",
+    "age": 30,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Ищу не идеал, а совместимость. Разве не в этом смысл?",
+    "photo": "137.jpg"
+  },
+  {
+    "name": "Еия",
+    "age": 22,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Ты не обязан быть идеальным. Просто будь настоящим.",
+    "photo": "138.jpg"
+  },
+  {
+    "name": "Жия",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Хочу с тобой встречать рассветы и провожать закаты.",
+    "photo": "139.jpg"
+  },
+  {
+    "name": "Зия",
+    "age": 20,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Смотрю в будущее с оптимизмом. Хочу смотреть туда вместе с тобой.",
+    "photo": "140.jpg"
+  },
+  {
+    "name": "Иия",
+    "age": 28,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Я — это море в штиль. Хочу найти берег.",
+    "photo": "141.jpg"
+  },
+  {
+    "name": "Кия",
+    "age": 20,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Жизнь слишком коротка для скучных людей. К счастью, ты похож на интересного.",
+    "photo": "142.jpg"
+  },
+  {
+    "name": "Лия",
+    "age": 25,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Верю в добро и в людей. Надеюсь, не напрасно.",
+    "photo": "143.jpg"
+  },
+  {
+    "name": "Мия",
+    "age": 30,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Ищу того, с кем стать лучше — не хуже.",
+    "photo": "144.jpg"
+  },
+  {
+    "name": "Ния",
+    "age": 29,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Влюбляюсь медленно, но навсегда. Готов к долгой игре?",
+    "photo": "145.jpg"
+  },
+  {
+    "name": "Оия",
+    "age": 28,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Люблю жизнь во всех её проявлениях. Ищу того, кто будет рядом и в радости, и в трудную минуту.",
+    "photo": "146.jpg"
+  },
+  {
+    "name": "Пия",
+    "age": 25,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Обожаю готовить, путешествовать и проводить время с близкими. Хочу настоящих отношений, без игр.",
+    "photo": "147.jpg"
+  },
+  {
+    "name": "Рия",
+    "age": 22,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Активная, позитивная, немного сумасшедшая — в хорошем смысле. Жду своего человека.",
+    "photo": "148.jpg"
+  },
+  {
+    "name": "Сия",
+    "age": 27,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Читаю книги, хожу в кино и мечтаю побывать в разных странах. Ищу того, кто разделит мои интересы.",
+    "photo": "149.jpg"
+  },
+  {
+    "name": "Тия",
+    "age": 22,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Говорят, у меня заразительный смех. Проверь сам — напиши мне.",
+    "photo": "150.jpg"
+  },
+  {
+    "name": "Camille",
+    "age": 19,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "J'aime la vie avec toute sa complexité. Je cherche quelqu'un d'honnête et attentionné.",
+    "photo": "151.jpg"
+  },
+  {
+    "name": "Manon",
+    "age": 24,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Passionnée de cuisine, de voyages et de bonne musique. À la recherche d'une vraie connexion.",
+    "photo": "152.jpg"
+  },
+  {
+    "name": "Chloé",
+    "age": 25,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Optimiste dans l'âme, réaliste dans les faits. Je cherche quelqu'un de sincère.",
+    "photo": "153.jpg"
+  },
+  {
+    "name": "Léa",
+    "age": 25,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "J'adore les longues conversations et les promenades au coucher du soleil. Et toi?",
+    "photo": "154.jpg"
+  },
+  {
+    "name": "Inès",
+    "age": 29,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Créative, curieuse et un peu rêveuse. Je cherche quelqu'un qui saura me faire rire.",
+    "photo": "155.jpg"
+  },
+  {
+    "name": "Clara",
+    "age": 21,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "La vie est trop courte pour les relations superficielles. Je veux du vrai.",
+    "photo": "156.jpg"
+  },
+  {
+    "name": "Alice",
+    "age": 22,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "J'aime la nature, les livres et le café du matin. Rejoins-moi?",
+    "photo": "157.jpg"
+  },
+  {
+    "name": "Lucie",
+    "age": 18,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Spontanée et sincère. Je cherche quelqu'un avec qui partager les petits bonheurs.",
+    "photo": "158.jpg"
+  },
+  {
+    "name": "Marie",
+    "age": 18,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "J'adore le cinéma, la cuisine et les soirées entre amis. La vie est belle quand on la partage.",
+    "photo": "159.jpg"
+  },
+  {
+    "name": "Jade",
+    "age": 21,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Douce mais déterminée. Je sais ce que je veux — peut-être toi?",
+    "photo": "160.jpg"
+  },
+  {
+    "name": "Lara",
+    "age": 23,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Amoureuse des voyages et des nouvelles cultures. Viens explorer le monde avec moi.",
+    "photo": "161.jpg"
+  },
+  {
+    "name": "Nina",
+    "age": 24,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "J'apprécie les gens vrais plus que les gens parfaits. Sois toi-même.",
+    "photo": "162.jpg"
+  },
+  {
+    "name": "Anaïs",
+    "age": 27,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Mon rire s'entend de loin. Bonne ou mauvaise nouvelle — tu décides.",
+    "photo": "163.jpg"
+  },
+  {
+    "name": "Mathilde",
+    "age": 23,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Je crois au hasard et aux belles rencontres. Est-ce que c'en est une?",
+    "photo": "164.jpg"
+  },
+  {
+    "name": "Pauline",
+    "age": 18,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Sportive le matin, romantique le soir. J'aime l'équilibre en tout.",
+    "photo": "165.jpg"
+  },
+  {
+    "name": "Juliette",
+    "age": 22,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Je parle avec mon cœur et j'écoute avec mes yeux. Cherche la même chose en toi.",
+    "photo": "166.jpg"
+  },
+  {
+    "name": "Margot",
+    "age": 20,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Passionnée par l'art et la gastronomie. La beauté est partout si on la cherche.",
+    "photo": "167.jpg"
+  },
+  {
+    "name": "Océane",
+    "age": 30,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "J'aime construire quelque chose de durable. Dans la vie comme dans l'amour.",
+    "photo": "168.jpg"
+  },
+  {
+    "name": "Elise",
+    "age": 20,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Curieuse de tout, ouverte à beaucoup. Je cherche quelqu'un d'aussi vivant que moi.",
+    "photo": "169.jpg"
+  },
+  {
+    "name": "Amélie",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Je souris aux inconnus et j'aide volontiers. C'est comme ça que je fonctionne.",
+    "photo": "170.jpg"
+  },
+  {
+    "name": "Céline",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "La douceur est ma force. Je cherche quelqu'un qui le comprend.",
+    "photo": "171.jpg"
+  },
+  {
+    "name": "Sophie",
+    "age": 22,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Indépendante mais pas solitaire. J'aime partager ma vie avec les bonnes personnes.",
+    "photo": "172.jpg"
+  },
+  {
+    "name": "Émilie",
+    "age": 28,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Férue de littérature et de promenades en forêt. Simple et sincère.",
+    "photo": "173.jpg"
+  },
+  {
+    "name": "Nathalie",
+    "age": 23,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Je crois que les petits gestes valent plus que les grands discours.",
+    "photo": "174.jpg"
+  },
+  {
+    "name": "Charlotte",
+    "age": 26,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Ma philosophie : profiter de chaque moment. Tu partages cette vision?",
+    "photo": "175.jpg"
+  },
+  {
+    "name": "Adèle",
+    "age": 23,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Sensible à la beauté du quotidien. À la recherche de quelqu'un qui voit pareil.",
+    "photo": "176.jpg"
+  },
+  {
+    "name": "Clémence",
+    "age": 22,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "J'adore danser, cuisiner et regarder les étoiles. Rejoins mon univers.",
+    "photo": "177.jpg"
+  },
+  {
+    "name": "Axelle",
+    "age": 29,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "Engagée, passionnée, parfois intense. Mais jamais ennuyeuse.",
+    "photo": "178.jpg"
+  },
+  {
+    "name": "Béatrice",
+    "age": 22,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Je construis ma vie avec soin. Je cherche quelqu'un qui en fait autant.",
+    "photo": "179.jpg"
+  },
+  {
+    "name": "Laurène",
+    "age": 26,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Ma force? Je sais écouter. Ma faiblesse? Je souris trop facilement.",
+    "photo": "180.jpg"
+  },
+  {
+    "name": "فاطمة",
+    "age": 21,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "أحب الحياة وأقدّر الناس الطيبين. أبحث عن شريك صادق وودود.",
+    "photo": "181.jpg"
+  },
+  {
+    "name": "مريم",
+    "age": 25,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "شغوفة بالطبخ والسفر والموسيقى. أريد علاقة حقيقية مبنية على الاحترام.",
+    "photo": "182.jpg"
+  },
+  {
+    "name": "زينب",
+    "age": 23,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "متفائلة بطبعي وأؤمن بأن الحياة جميلة. أبحث عمّن يشاركني هذه النظرة.",
+    "photo": "183.jpg"
+  },
+  {
+    "name": "عائشة",
+    "age": 18,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "أحب القراءة والطبيعة والهدوء. أبحث عن رفيق عمر.",
+    "photo": "184.jpg"
+  },
+  {
+    "name": "نور",
+    "age": 18,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "طموحة وعملية في نفس الوقت. أريد شريكاً يشجعني ويشجعه.",
+    "photo": "185.jpg"
+  },
+  {
+    "name": "سارة",
+    "age": 29,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "ضحكتي معدية — هكذا يقولون. جرّب بنفسك.",
+    "photo": "186.jpg"
+  },
+  {
+    "name": "لينا",
+    "age": 25,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "أقدّر الصدق والوفاء فوق كل شيء. هل أنت كذلك؟",
+    "photo": "187.jpg"
+  },
+  {
+    "name": "ريم",
+    "age": 23,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "أعشق الرحلات واكتشاف ثقافات جديدة. هل تحب المغامرة؟",
+    "photo": "188.jpg"
+  },
+  {
+    "name": "دينا",
+    "age": 28,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "بسيطة من الخارج، عميقة من الداخل. تعرّف عليّ أكثر.",
+    "photo": "189.jpg"
+  },
+  {
+    "name": "هند",
+    "age": 24,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "أحب الأسرة وأقدّر قيمة الوقت المشترك. هذا ما أبحث عنه.",
+    "photo": "190.jpg"
+  },
+  {
+    "name": "رنا",
+    "age": 26,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "رومانسية لكن واقعية. أريد حبّاً حقيقياً لا أحلاماً فارغة.",
+    "photo": "191.jpg"
+  },
+  {
+    "name": "أمل",
+    "age": 18,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "أعمل بجدّ وأهتم بنمو نفسي. أبحث عمّن يفهم معنى الطموح.",
+    "photo": "192.jpg"
+  },
+  {
+    "name": "سلمى",
+    "age": 25,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "أؤمن أن الصدق أساس كل علاقة ناجحة.",
+    "photo": "193.jpg"
+  },
+  {
+    "name": "رهف",
+    "age": 18,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "أحب الطبيعة والغروب والهواء الطلق. أريد شريكاً يحب ذلك أيضاً.",
+    "photo": "194.jpg"
+  },
+  {
+    "name": "غادة",
+    "age": 19,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "لطيفة، صبورة، ولديّ حسّ فكاهي رائع.",
+    "photo": "195.jpg"
+  },
+  {
+    "name": "ميساء",
+    "age": 28,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "أبحث عن شريك يكون صديقي قبل أن يكون أي شيء آخر.",
+    "photo": "196.jpg"
+  },
+  {
+    "name": "شيرين",
+    "age": 30,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "أنا أُحسن الإنصات كما أُحسن الكلام. هل أنت كذلك؟",
+    "photo": "197.jpg"
+  },
+  {
+    "name": "لمى",
+    "age": 26,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "أعشق الطبخ وتجربة وصفات جديدة. هل تجرؤ على التذوّق؟",
+    "photo": "198.jpg"
+  },
+  {
+    "name": "إيمان",
+    "age": 22,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "حياتي مليئة بالتفاصيل الجميلة. أريد من يراها معي.",
+    "photo": "199.jpg"
+  },
+  {
+    "name": "هيفاء",
+    "age": 26,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "قويّة لكنني أحب الرعاية والاهتمام. من قال إن الاثنين لا يجتمعان؟",
+    "photo": "200.jpg"
+  },
+  {
+    "name": "جنى",
+    "age": 19,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "أحلم بمستقبل مشترك مبني على الثقة والمحبة.",
+    "photo": "201.jpg"
+  },
+  {
+    "name": "وفاء",
+    "age": 28,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "أؤمن بالحظ والمصادفات الجميلة. ربما أنت إحداها.",
+    "photo": "202.jpg"
+  },
+  {
+    "name": "نادين",
+    "age": 24,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "أقدّر الوفاء والاحترام المتبادل أكثر من أي شيء.",
+    "photo": "203.jpg"
+  },
+  {
+    "name": "رشا",
+    "age": 26,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "أعشق الفنون والموسيقى والسينما. للثقافة مكانة خاصة في قلبي.",
+    "photo": "204.jpg"
+  },
+  {
+    "name": "مها",
+    "age": 26,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "أبتسم للغرباء وأساعد حين أستطيع. هكذا أنا.",
+    "photo": "205.jpg"
+  },
+  {
+    "name": "لجين",
+    "age": 26,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "أريد علاقة تنمو وتتطور مع الوقت.",
+    "photo": "206.jpg"
+  },
+  {
+    "name": "روان",
+    "age": 23,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "أحب التفاصيل الصغيرة — رسالة صباحية، مكالمة عفوية.",
+    "photo": "207.jpg"
+  },
+  {
+    "name": "بيان",
+    "age": 26,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "لا أبحث عن المثالي، بل عن الحقيقي.",
+    "photo": "208.jpg"
+  },
+  {
+    "name": "يسرى",
+    "age": 27,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "حياتي مشغولة لكن قلبي متاح للشخص المناسب.",
+    "photo": "209.jpg"
+  },
+  {
+    "name": "صفاء",
+    "age": 19,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "أبحث عن من يجعلني أضحك كل يوم.",
+    "photo": "210.jpg"
+  },
+  {
+    "name": "지은",
+    "age": 25,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "여행과 독서를 좋아해요. 함께 세상을 탐험할 사람을 찾고 있어요.",
+    "photo": "211.jpg"
+  },
+  {
+    "name": "수빈",
+    "age": 30,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "요리와 음악이 제 취미예요. 진심 어린 관계를 원해요.",
+    "photo": "212.jpg"
+  },
+  {
+    "name": "유진",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "웃음이 많고 긍정적인 편이에요. 같이 웃을 수 있는 사람이면 좋겠어요.",
+    "photo": "213.jpg"
+  },
+  {
+    "name": "민지",
+    "age": 25,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "커피와 책, 그리고 좋은 대화. 이런 걸 좋아한다면 잘 맞을 것 같아요.",
+    "photo": "214.jpg"
+  },
+  {
+    "name": "하은",
+    "age": 21,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "일도 열심히, 사랑도 열심히 하는 타입이에요.",
+    "photo": "215.jpg"
+  },
+  {
+    "name": "서연",
+    "age": 27,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "솔직하고 따뜻한 사람을 좋아해요. 저도 그렇게 노력해요.",
+    "photo": "216.jpg"
+  },
+  {
+    "name": "지윤",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "작은 것에 행복을 느끼는 편이에요. 함께 소소한 일상을 즐겨요.",
+    "photo": "217.jpg"
+  },
+  {
+    "name": "예린",
+    "age": 29,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "운동하고 자연 속에서 걷는 걸 좋아해요. 같이 하실 분?",
+    "photo": "218.jpg"
+  },
+  {
+    "name": "나은",
+    "age": 29,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "진지한 만남을 원해요. 오래 함께할 사람을 찾고 있어요.",
+    "photo": "219.jpg"
+  },
+  {
+    "name": "소연",
+    "age": 30,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "영화와 음악을 좋아하고, 깊은 대화를 즐겨요.",
+    "photo": "220.jpg"
+  },
+  {
+    "name": "아름",
+    "age": 21,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "매일 조금씩 성장하려고 노력해요. 함께 성장할 사람이면 더 좋겠어요.",
+    "photo": "221.jpg"
+  },
+  {
+    "name": "채원",
+    "age": 23,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "따뜻하고 진실한 사람이에요. 믿을 수 있는 관계를 원해요.",
+    "photo": "222.jpg"
+  },
+  {
+    "name": "보람",
+    "age": 29,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "웃음 많고 활발한 편이에요. 같이 있으면 재미있다는 말 자주 들어요.",
+    "photo": "223.jpg"
+  },
+  {
+    "name": "수현",
+    "age": 26,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "요리를 잘해요. 제가 만든 음식 먹어볼래요?",
+    "photo": "224.jpg"
+  },
+  {
+    "name": "지혜",
+    "age": 25,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "꿈이 많고 열정적이에요. 함께 꿈꿀 수 있는 사람을 만나고 싶어요.",
+    "photo": "225.jpg"
+  },
+  {
+    "name": "민아",
+    "age": 28,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "솔직하고 다정한 사람이에요. 가식 없는 관계를 원해요.",
+    "photo": "226.jpg"
+  },
+  {
+    "name": "예은",
+    "age": 29,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "음악을 들으며 산책하는 걸 좋아해요. 같이 걸어요.",
+    "photo": "227.jpg"
+  },
+  {
+    "name": "혜진",
+    "age": 21,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "책을 읽고 생각하는 걸 좋아해요. 대화가 통하는 사람이면 좋겠어요.",
+    "photo": "228.jpg"
+  },
+  {
+    "name": "수진",
+    "age": 19,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "낙천적이고 적극적인 성격이에요. 함께라면 뭐든 즐거울 것 같아요.",
+    "photo": "229.jpg"
+  },
+  {
+    "name": "지현",
+    "age": 22,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "연애보다 우정 먼저라고 생각해요. 좋은 친구가 되어줄 수 있나요?",
+    "photo": "230.jpg"
+  },
+  {
+    "name": "은지",
+    "age": 25,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "소소한 일상에서 행복을 찾아요. 같이 찾아볼래요?",
+    "photo": "231.jpg"
+  },
+  {
+    "name": "다은",
+    "age": 27,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "성실하고 배려심이 많아요. 상대방을 존중하는 사람을 원해요.",
+    "photo": "232.jpg"
+  },
+  {
+    "name": "세연",
+    "age": 23,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "자연을 좋아하고 사진 찍는 걸 즐겨요. 같이 추억 만들어요.",
+    "photo": "233.jpg"
+  },
+  {
+    "name": "하늘",
+    "age": 24,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "때로는 조용히, 때로는 활발하게. 분위기에 잘 맞춰요.",
+    "photo": "234.jpg"
+  },
+  {
+    "name": "미소",
+    "age": 23,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "진심을 다해 사랑할 자신 있어요. 그럴 준비가 된 사람을 기다려요.",
+    "photo": "235.jpg"
+  },
+  {
+    "name": "수아",
+    "age": 25,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "좋아하는 것: 빵 굽기, 드라마 보기, 새벽 산책.",
+    "photo": "236.jpg"
+  },
+  {
+    "name": "지영",
+    "age": 26,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "함께 있을 때 편안한 사람이고 싶고, 그런 사람을 원해요.",
+    "photo": "237.jpg"
+  },
+  {
+    "name": "나리",
+    "age": 29,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "유머 감각 있고 센스 있는 사람이 좋아요. 저도 그렇거든요.",
+    "photo": "238.jpg"
+  },
+  {
+    "name": "소희",
+    "age": 25,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "오래 사귈수록 더 좋은 사람이 되고 싶어요.",
+    "photo": "239.jpg"
+  },
+  {
+    "name": "연주",
+    "age": 20,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "당신을 만나면 더 행복해질 것 같아요.",
+    "photo": "240.jpg"
+  },
+  {
+    "name": "Sophie",
+    "age": 20,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "J'aime la vie avec toute sa complexité. Je cherche quelqu'un d'honnête et attentionné.",
+    "photo": "241.jpg"
+  },
+  {
+    "name": "Lena",
+    "age": 28,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Passionnée de cuisine, de voyages et de bonne musique. À la recherche d'une vraie connexion.",
+    "photo": "242.jpg"
+  },
+  {
+    "name": "Laura",
+    "age": 24,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Optimiste dans l'âme, réaliste dans les faits. Je cherche quelqu'un de sincère.",
+    "photo": "243.jpg"
+  },
+  {
+    "name": "Anna",
+    "age": 21,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "J'adore les longues conversations et les promenades au coucher du soleil. Et toi?",
+    "photo": "244.jpg"
+  },
+  {
+    "name": "Julia",
+    "age": 29,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Créative, curieuse et un peu rêveuse. Je cherche quelqu'un qui saura me faire rire.",
+    "photo": "245.jpg"
+  },
+  {
+    "name": "Lisa",
+    "age": 23,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "La vie est trop courte pour les relations superficielles. Je veux du vrai.",
+    "photo": "246.jpg"
+  },
+  {
+    "name": "Hannah",
+    "age": 23,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "J'aime la nature, les livres et le café du matin. Rejoins-moi?",
+    "photo": "247.jpg"
+  },
+  {
+    "name": "Luisa",
+    "age": 30,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Spontanée et sincère. Je cherche quelqu'un avec qui partager les petits bonheurs.",
+    "photo": "248.jpg"
+  },
+  {
+    "name": "Maja",
+    "age": 23,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "J'adore le cinéma, la cuisine et les soirées entre amis. La vie est belle quand on la partage.",
+    "photo": "249.jpg"
+  },
+  {
+    "name": "Lotta",
+    "age": 19,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Douce mais déterminée. Je sais ce que je veux — peut-être toi?",
+    "photo": "250.jpg"
+  },
+  {
+    "name": "Frida",
+    "age": 29,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Amoureuse des voyages et des nouvelles cultures. Viens explorer le monde avec moi.",
+    "photo": "251.jpg"
+  },
+  {
+    "name": "Astrid",
+    "age": 27,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "J'apprécie les gens vrais plus que les gens parfaits. Sois toi-même.",
+    "photo": "252.jpg"
+  },
+  {
+    "name": "Sigrid",
+    "age": 23,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "Mon rire s'entend de loin. Bonne ou mauvaise nouvelle — tu décides.",
+    "photo": "253.jpg"
+  },
+  {
+    "name": "Ingrid",
+    "age": 27,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Je crois au hasard et aux belles rencontres. Est-ce que c'en est une?",
+    "photo": "254.jpg"
+  },
+  {
+    "name": "Britta",
+    "age": 27,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Sportive le matin, romantique le soir. J'aime l'équilibre en tout.",
+    "photo": "255.jpg"
+  },
+  {
+    "name": "Elin",
+    "age": 27,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Je parle avec mon cœur et j'écoute avec mes yeux. Cherche la même chose en toi.",
+    "photo": "256.jpg"
+  },
+  {
+    "name": "Karin",
+    "age": 19,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Passionnée par l'art et la gastronomie. La beauté est partout si on la cherche.",
+    "photo": "257.jpg"
+  },
+  {
+    "name": "Malin",
+    "age": 21,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "J'aime construire quelque chose de durable. Dans la vie comme dans l'amour.",
+    "photo": "258.jpg"
+  },
+  {
+    "name": "Saga",
+    "age": 20,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Curieuse de tout, ouverte à beaucoup. Je cherche quelqu'un d'aussi vivant que moi.",
+    "photo": "259.jpg"
+  },
+  {
+    "name": "Ida",
+    "age": 29,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Je souris aux inconnus et j'aide volontiers. C'est comme ça que je fonctionne.",
+    "photo": "260.jpg"
+  },
+  {
+    "name": "Thea",
+    "age": 26,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "La douceur est ma force. Je cherche quelqu'un qui le comprend.",
+    "photo": "261.jpg"
+  },
+  {
+    "name": "Emilie",
+    "age": 27,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Indépendante mais pas solitaire. J'aime partager ma vie avec les bonnes personnes.",
+    "photo": "262.jpg"
+  },
+  {
+    "name": "Signe",
+    "age": 29,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Férue de littérature et de promenades en forêt. Simple et sincère.",
+    "photo": "263.jpg"
+  },
+  {
+    "name": "Tuva",
+    "age": 29,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Je crois que les petits gestes valent plus que les grands discours.",
+    "photo": "264.jpg"
+  },
+  {
+    "name": "Oda",
+    "age": 19,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Ma philosophie : profiter de chaque moment. Tu partages cette vision?",
+    "photo": "265.jpg"
+  },
+  {
+    "name": "Linnea",
+    "age": 26,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Sensible à la beauté du quotidien. À la recherche de quelqu'un qui voit pareil.",
+    "photo": "266.jpg"
+  },
+  {
+    "name": "Freya",
+    "age": 27,
+    "city": "Навои",
+    "looking_for": "парня",
+    "description": "J'adore danser, cuisiner et regarder les étoiles. Rejoins mon univers.",
+    "photo": "267.jpg"
+  },
+  {
+    "name": "Elsa",
+    "age": 20,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Engagée, passionnée, parfois intense. Mais jamais ennuyeuse.",
+    "photo": "268.jpg"
+  },
+  {
+    "name": "Alva",
+    "age": 28,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Je construis ma vie avec soin. Je cherche quelqu'un qui en fait autant.",
+    "photo": "269.jpg"
+  },
+  {
+    "name": "Vera",
+    "age": 29,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Ma force? Je sais écouter. Ma faiblesse? Je souris trop facilement.",
+    "photo": "270.jpg"
+  },
+  {
+    "name": "Giulia",
+    "age": 23,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Amo la vita e le persone genuine. Cerco qualcuno con cui condividere momenti veri.",
+    "photo": "271.jpg"
+  },
+  {
+    "name": "Chiara",
+    "age": 28,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Appassionata di cucina, viaggi e buona musica. Voglio una relazione autentica.",
+    "photo": "272.jpg"
+  },
+  {
+    "name": "Francesca",
+    "age": 28,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Ottimista per natura, concreta per esperienza. Cerco qualcuno di sincero.",
+    "photo": "273.jpg"
+  },
+  {
+    "name": "Valentina",
+    "age": 28,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Adoro le lunghe conversazioni e le passeggiate al tramonto. E tu?",
+    "photo": "274.jpg"
+  },
+  {
+    "name": "Aurora",
+    "age": 26,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Creativa, curiosa e un po' sognante. Cerco qualcuno che sappia farmi ridere.",
+    "photo": "275.jpg"
+  },
+  {
+    "name": "Martina",
+    "age": 21,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "La vita è troppo breve per le relazioni superficiali. Voglio qualcosa di vero.",
+    "photo": "276.jpg"
+  },
+  {
+    "name": "Elena",
+    "age": 26,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Amo la natura, i libri e il caffè del mattino. Ti unisci a me?",
+    "photo": "277.jpg"
+  },
+  {
+    "name": "Isabella",
+    "age": 29,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Spontanea e sincera. Cerco qualcuno con cui condividere le piccole gioie.",
+    "photo": "278.jpg"
+  },
+  {
+    "name": "Beatrice",
+    "age": 22,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Adoro il cinema, la cucina e le serate con gli amici. La vita è bella condivisa.",
+    "photo": "279.jpg"
+  },
+  {
+    "name": "Elisa",
+    "age": 28,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Dolce ma determinata. So quello che voglio — forse sei tu.",
+    "photo": "280.jpg"
+  },
+  {
+    "name": "Roberta",
+    "age": 22,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Amante dei viaggi e delle nuove culture. Esploriamo il mondo insieme.",
+    "photo": "281.jpg"
+  },
+  {
+    "name": "Serena",
+    "age": 25,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Apprezzo le persone vere più di quelle perfette. Sii te stesso.",
+    "photo": "282.jpg"
+  },
+  {
+    "name": "Giada",
+    "age": 18,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "La mia risata si sente da lontano. Buona o cattiva notizia — decidi tu.",
+    "photo": "283.jpg"
+  },
+  {
+    "name": "Sofia",
+    "age": 21,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Credo nel caso e negli incontri belli. Potrebbe essere questo uno di quelli?",
+    "photo": "284.jpg"
+  },
+  {
+    "name": "Lucia",
+    "age": 24,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Sportiva la mattina, romantica la sera. Amo l'equilibrio in tutto.",
+    "photo": "285.jpg"
+  },
+  {
+    "name": "Marta",
+    "age": 22,
+    "city": "Гулистан",
+    "looking_for": "парня",
+    "description": "Parlo con il cuore e ascolto con gli occhi. Cerco lo stesso in te.",
+    "photo": "286.jpg"
+  },
+  {
+    "name": "Carla",
+    "age": 24,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Appassionata d'arte e gastronomia. La bellezza è ovunque se la si cerca.",
+    "photo": "287.jpg"
+  },
+  {
+    "name": "Federica",
+    "age": 19,
+    "city": "Бухара",
+    "looking_for": "парня",
+    "description": "Amo costruire qualcosa di duraturo. Nella vita come nell'amore.",
+    "photo": "288.jpg"
+  },
+  {
+    "name": "Alessia",
+    "age": 18,
+    "city": "Фергана",
+    "looking_for": "парня",
+    "description": "Curiosa di tutto, aperta a tanto. Cerco qualcuno di altrettanto vitale.",
+    "photo": "289.jpg"
+  },
+  {
+    "name": "Silvia",
+    "age": 28,
+    "city": "Карши",
+    "looking_for": "парня",
+    "description": "Sorrido agli sconosciuti e aiuto volentieri. Sono fatta così.",
+    "photo": "290.jpg"
+  },
+  {
+    "name": "Giorgia",
+    "age": 30,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "La dolcezza è la mia forza. Cerco qualcuno che lo capisca.",
+    "photo": "291.jpg"
+  },
+  {
+    "name": "Michela",
+    "age": 23,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Indipendente ma non solitaria. Amo condividere la mia vita con le persone giuste.",
+    "photo": "292.jpg"
+  },
+  {
+    "name": "Simona",
+    "age": 30,
+    "city": "Наманган",
+    "looking_for": "парня",
+    "description": "Appassionata di letteratura e passeggiate nel bosco. Semplice e sincera.",
+    "photo": "293.jpg"
+  },
+  {
+    "name": "Paola",
+    "age": 28,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Credo che i piccoli gesti valgano più dei grandi discorsi.",
+    "photo": "294.jpg"
+  },
+  {
+    "name": "Laura",
+    "age": 20,
+    "city": "Андижан",
+    "looking_for": "парня",
+    "description": "La mia filosofia: godersi ogni momento. Condividi questa visione?",
+    "photo": "295.jpg"
+  },
+  {
+    "name": "Claudia",
+    "age": 26,
+    "city": "Ташкент",
+    "looking_for": "парня",
+    "description": "Sensibile alla bellezza del quotidiano. Cerco qualcuno che veda le stesse cose.",
+    "photo": "296.jpg"
+  },
+  {
+    "name": "Monica",
+    "age": 27,
+    "city": "Термез",
+    "looking_for": "парня",
+    "description": "Adoro ballare, cucinare e guardare le stelle. Entra nel mio mondo.",
+    "photo": "297.jpg"
+  },
+  {
+    "name": "Daniela",
+    "age": 26,
+    "city": "Самарканд",
+    "looking_for": "парня",
+    "description": "Impegnata, appassionata, a volte intensa. Ma mai noiosa.",
+    "photo": "298.jpg"
+  },
+  {
+    "name": "Cristina",
+    "age": 27,
+    "city": "Ургенч",
+    "looking_for": "парня",
+    "description": "Costruisco la mia vita con cura. Cerco qualcuno che faccia lo stesso.",
+    "photo": "299.jpg"
+  },
+  {
+    "name": "Raffaella",
+    "age": 25,
+    "city": "Нукус",
+    "looking_for": "парня",
+    "description": "Il mio punto di forza? So ascoltare. Il mio difetto? Sorrido troppo facilmente.",
+    "photo": "300.jpg"
+  }
+]
