@@ -120,7 +120,7 @@ class MatchService:
             profile = (await s.execute(
                 select(User).options(selectinload(User.tags))
                 .where(and_(*conditions(liked_ids | recently_seen)))
-                .order_by(boost.desc(), User.activity_score.desc()).limit(1)
+                .order_by(boost.desc(), func.random()).limit(1)
             )).scalar_one_or_none()
 
             # Уровень 2: сбрасываем историю просмотров, исключаем только лайкнутых
@@ -134,7 +134,7 @@ class MatchService:
                 profile = (await s.execute(
                     select(User).options(selectinload(User.tags))
                     .where(and_(*conditions(liked_ids)))
-                    .order_by(boost.desc(), User.activity_score.desc()).limit(1)
+                    .order_by(boost.desc(), func.random()).limit(1)
                 )).scalar_one_or_none()
 
             # Уровень 3: показываем вообще всех (даже лайкнутых) — анкеты никогда не кончаются
@@ -143,7 +143,7 @@ class MatchService:
                 profile = (await s.execute(
                     select(User).options(selectinload(User.tags))
                     .where(and_(*conditions(set())))
-                    .order_by(boost.desc(), User.activity_score.desc()).limit(1)
+                    .order_by(boost.desc(), func.random()).limit(1)
                 )).scalar_one_or_none()
                 # Не записываем просмотр для уровня 3
                 return profile
