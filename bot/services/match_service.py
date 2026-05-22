@@ -5,11 +5,11 @@ from sqlalchemy.orm import selectinload
 from database.models import User, Like, ProfileView, Premium, VipPremium, Referral, BlackList
 from database.session import Session
 
-RESHOW_DAYS    = 7
-LIMIT_FREE     = 20
-LIMIT_REFERRAL = 30   # +10 за реферала
-LIMIT_PREMIUM  = 70   # +50 за Premium
-LIMIT_VIP      = 70   # VIP = те же 70 (бонус VIP — личка, не лимит)
+RESHOW_DAYS    = 1
+LIMIT_FREE     = 10
+LIMIT_REFERRAL = 20   # +10 за реферала
+LIMIT_PREMIUM  = 30   # +50 за Premium
+LIMIT_VIP      = 50   # VIP = те же 70 (бонус VIP — личка, не лимит)
 
 
 class MatchService:
