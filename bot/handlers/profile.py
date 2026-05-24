@@ -11,9 +11,9 @@ from bot.i18n import t
 from bot.modules.tags import TagModule
 
 MENU_BUTTONS = {
-    "👀 Смотреть анкеты", "👀 Anketalarni ko'rish",
-    "🔍 Поиск", "🔍 Qidiruv",
-    "⭐ Избранные", "⭐ Sevimlilar",
+    "👀 Смотреть анкеты", "👀 Anketalarni ko'rish", "👀 Browse Profiles",
+    "🔍 Поиск", "🔍 Qidiruv", "🔍 Search",
+    "⭐ Избранные", "⭐ Sevimlilar", "⭐ Favorites",
     "🔗 Реферал", "🔗 Referal",
     "👤 Мой профиль", "👤 Mening anketam",
 }
