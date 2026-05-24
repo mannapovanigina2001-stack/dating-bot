@@ -11,9 +11,9 @@ import time
 WAITING_COMPLAINT = 1
 
 MENU_BUTTONS = {
-    "👀 Смотреть анкеты", "👀 Anketalarni ko'rish",
-    "🔍 Поиск",           "🔍 Qidiruv",
-    "⭐ Избранные",        "⭐ Sevimlilar",
+    "👀 Смотреть анкеты", "👀 Anketalarni ko'rish", "👀 Browse Profiles",
+    "🔍 Поиск",           "🔍 Qidiruv",           "🔍 Search",
+    "⭐ Избранные",        "⭐ Sevimlilar",        "⭐ Favorites",
     "🔗 Реферал",         "🔗 Referal",
     "👤 Мой профиль",     "👤 Mening anketam",
 }
