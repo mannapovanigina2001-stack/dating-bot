@@ -614,41 +614,44 @@ TEXTS = {
     "btn_premium_1m": {"ru": "⭐ 1 месяц — 30 000 сум",      "uz": "⭐ 1 oy — 30 000 so'm",       "en": "⭐ 1 month — 30 000 UZS"},
     "btn_premium_3m": {"ru": "⭐⭐ 3 месяца — 70 000 сум",   "uz": "⭐⭐ 3 oy — 70 000 so'm",      "en": "⭐⭐ 3 months — 70 000 UZS"},
     "btn_premium_1y": {"ru": "⭐⭐⭐ 1 год — 250 000 сум",   "uz": "⭐⭐⭐ 1 yil — 250 000 so'm",   "en": "⭐⭐⭐ 1 year — 250 000 UZS"},
-    "premium_payment": {
-        "ru": (
-            "💳 <b>Оплата Premium — {label}</b>\n\n"
-            "Сумма: <b>{price}</b>\n\n"
-            "📍 <b>Номер карты:</b>\n<code>{card}</code>\n\n"
-            "⚠️ <b>Инструкция:</b>\n"
-            "1️⃣ Скопируй номер карты\n"
-            "2️⃣ Переведи <b>{price}</b> на карту\n"
-            "3️⃣ Сделай скриншот чека\n"
-            "4️⃣ Нажми кнопку ниже и отправь скриншот\n\n"
-            "⏳ Активация в течение 15 минут"
-        ),
-        "uz": (
-            "💳 <b>Premium to'lovi — {label}</b>\n\n"
-            "Summa: <b>{price}</b>\n\n"
-            "📍 <b>Karta raqami:</b>\n<code>{card}</code>\n\n"
-            "⚠️ <b>Ko'rsatma:</b>\n"
-            "1️⃣ Karta raqamini nusxa oling\n"
-            "2️⃣ <b>{price}</b> kartaga o'tkaring\n"
-            "3️⃣ Chek skrinshotini oling\n"
-            "4️⃣ Quyidagi tugmani bosib skrinshotni yuboring\n\n"
-            "⏳ 15 daqiqa ichida faollashtirish"
-        ),
-        "en": (
-            "💳 <b>Premium Payment — {label}</b>\n\n"
-            "Amount: <b>{price}</b>\n\n"
-            "📍 <b>Card number:</b>\n<code>{card}</code>\n\n"
-            "⚠️ <b>Instructions:</b>\n"
-            "1️⃣ Copy the card number\n"
-            "2️⃣ Transfer <b>{price}</b> to the card\n"
-            "3️⃣ Take a screenshot of the receipt\n"
-            "4️⃣ Press the button below and send the screenshot\n\n"
-            "⏳ Activation within 15 minutes"
-        ),
-    },
+   "premium_payment": {
+    "ru": (
+        "💳 <b>Оплата Premium — {label}</b>\n\n"
+        "Сумма: <b>{price}</b>\n\n"
+        "📍 <b>Номер карты:</b>\n<code>{card}</code>\n\n"
+        "⚠️ <b>Инструкция:</b>\n"
+        "1️⃣ Скопируй номер карты\n"
+        "2️⃣ Переведи <b>{price}</b> на карту\n"
+        "3️⃣ Сделай скриншот чека\n"
+        "4️⃣ Нажми кнопку ниже и отправь скриншот\n\n"
+        "⏳ Активация в течение 15 минут"
+    ),
+    "uz": (
+        "💳 <b>Premium to'lovi — {label}</b>\n\n"
+        "Summa: <b>{price}</b>\n\n"
+        "📍 <b>Karta raqami:</b>\n<code>{card}</code>\n\n"
+        "⚠️ <b>Ko'rsatma:</b>\n"
+        "1️⃣ Karta raqamini nusxa oling\n"
+        "2️⃣ <b>{price}</b> kartaga o'tkaring\n"
+        "3️⃣ Chek skrinshotini oling\n"
+        "4️⃣ Quyidagi tugmani bosib skrinshotni yuboring\n\n"
+        "⏳ 15 daqiqa ichida faollashtirish"
+    ),
+    "en": (
+        "💳 <b>Premium Payment — {label}</b>\n\n"
+        "Amount: <b>{price}</b>\n\n"
+        "Choose your payment method:\n\n"
+        "💳 <b>Card (Uzbekistan):</b>\n<code>{card}</code>\n\n"
+        "₿ <b>Bitcoin (BTC):</b>\n<code>bc1q43zu07n7mxzfv9235l0k2a39hnktgd8xt85gu5</code>\n\n"
+        "⧫ <b>Ethereum (ETH):</b>\n<code>0xd4520a3a3290ebbdf608f4400a414e1117d4dbf7</code>\n\n"
+        "⚠️ <b>Instructions:</b>\n"
+        "1️⃣ Copy the address you want to pay to\n"
+        "2️⃣ Send exactly <b>{price}</b>\n"
+        "3️⃣ Take a screenshot of the transaction\n"
+        "4️⃣ Press the button below and send the screenshot\n\n"
+        "⏳ Activation within 15 minutes"
+    ),
+},
     "btn_pay_confirm": {
         "ru": "✅ Я оплатил — отправить чек",
         "uz": "✅ To'ladim — chekni yuborish",
