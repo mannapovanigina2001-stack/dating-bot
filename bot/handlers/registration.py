@@ -376,9 +376,9 @@ def register_handlers(app: Application):
             # Кнопки меню завершают диалог
             MessageHandler(
                 filters.Regex(
-                    "^(👀 Смотреть анкеты|👀 Anketalarni ko'rish"
-                    "|🔍 Поиск|🔍 Qidiruv"
-                    "|⭐ Избранные|⭐ Sevimlilar"
+                    "^(👀 Смотреть анкеты|👀 Anketalarni ko'rish|👀 Browse Profiles"
+                    "|🔍 Поиск|🔍 Qidiruv|🔍 Search"
+                    "|⭐ Избранные|⭐ Sevimlilar|⭐ Favorites"
                     "|🔗 Реферал|🔗 Referal"
                     "|👤 Мой профиль|👤 Mening anketam)$"
                 ),
