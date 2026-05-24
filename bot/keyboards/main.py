@@ -13,10 +13,15 @@ def main_menu_kb(lang: str = "ru") -> ReplyKeyboardMarkup:
 
 
 def language_kb() -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup([[
-        InlineKeyboardButton("🇷🇺 Русский", callback_data="lang:ru"),
-        InlineKeyboardButton("🇺🇿 O'zbek",  callback_data="lang:uz"),
-    ]])
+    return InlineKeyboardMarkup([
+        [
+            InlineKeyboardButton("🇷🇺 Русский", callback_data="lang:ru"),
+            InlineKeyboardButton("🇺🇿 O'zbek",  callback_data="lang:uz"),
+        ],
+        [
+            InlineKeyboardButton("🇬🇧 English", callback_data="lang:en"),
+        ],
+    ])
 
 
 def gender_kb(lang: str = "ru") -> InlineKeyboardMarkup:
@@ -79,8 +84,8 @@ def report_reason_kb(target_id: int, lang: str = "ru") -> InlineKeyboardMarkup:
 
 def profile_actions_kb(lang: str = "ru", is_active: bool = True) -> InlineKeyboardMarkup:
     hide_label = (
-        ("🙈 Скрыть" if lang == "ru" else "🙈 Yashirish") if is_active
-        else ("👁 Показать" if lang == "ru" else "👁 Ko'rsatish")
+        {"ru": "🙈 Скрыть", "uz": "🙈 Yashirish", "en": "🙈 Hide"}.get(lang, "🙈 Hide") if is_active
+        else {"ru": "👁 Показать", "uz": "👁 Ko'rsatish", "en": "👁 Show"}.get(lang, "👁 Show")
     )
     return InlineKeyboardMarkup([
         [InlineKeyboardButton(t("btn_profile_edit",    lang), callback_data="profile:edit"),
@@ -114,12 +119,12 @@ def favorites_item_kb(target_id: int, lang: str = "ru", has_vip: bool = False) -
     rows = []
     if has_vip:
         rows.append([InlineKeyboardButton(
-            "💌 Запросить личку (VIP)" if lang == "ru" else "💌 Aloqa so'rash (VIP)",
+            {"ru": "💌 Запросить личку (VIP)", "uz": "💌 Aloqa so'rash (VIP)", "en": "💌 Request DM (VIP)"}.get(lang, "💌 Request DM (VIP)"),
             callback_data=f"vip_contact:{target_id}"
         )])
     rows.append([
         InlineKeyboardButton(
-            "🗑 Удалить из избранного" if lang == "ru" else "🗑 Sevimlilardan o'chirish",
+            {"ru": "🗑 Удалить из избранного", "uz": "🗑 Sevimlilardan o'chirish", "en": "🗑 Remove from favorites"}.get(lang, "🗑 Remove from favorites"),
             callback_data=f"fav_remove:{target_id}"
         )
     ])
@@ -145,55 +150,50 @@ def referral_kb(bot_username: str, referral_code: str, lang: str = "ru") -> Inli
         ),
     ]])
 
-
 CARD_NUMBER = "5614 6816 2116 5566"
+BTC_ADDRESS = "bc1q43zu07n7mxzfv9235l0k2a39hnktgd8xt85gu5"
+ETH_ADDRESS = "0xd4520a3a3290ebbdf608f4400a414e1117d4dbf7"
 
 PREMIUM_PLANS = {
     "1m": {
-        "label": {"ru": "⭐ Premium — 1 месяц",  "uz": "⭐ Premium — 1 oy"},
-        "price": {"ru": "30 000 сум",             "uz": "30 000 so'm"},
+        "label": {"ru": "⭐ Premium — 1 месяц",  "uz": "⭐ Premium — 1 oy",  "en": "⭐ Premium — 1 month"},
+        "price": {"ru": "30 000 сум",             "uz": "30 000 so'm (3$)",   "en": "$3"},
         "days":  30,
         "type":  "premium",
     },
     "3m": {
-        "label": {"ru": "⭐ Premium — 3 месяца", "uz": "⭐ Premium — 3 oy"},
-        "price": {"ru": "70 000 сум",             "uz": "70 000 so'm"},
+        "label": {"ru": "⭐ Premium — 3 месяца", "uz": "⭐ Premium — 3 oy",  "en": "⭐ Premium — 3 months"},
+        "price": {"ru": "70 000 сум",             "uz": "70 000 so'm (7$)",   "en": "$7"},
         "days":  90,
         "type":  "premium",
     },
     "1y": {
-        "label": {"ru": "⭐ Premium — 1 год",    "uz": "⭐ Premium — 1 yil"},
-        "price": {"ru": "250 000 сум",            "uz": "250 000 so'm"},
+        "label": {"ru": "⭐ Premium — 1 год",    "uz": "⭐ Premium — 1 yil", "en": "⭐ Premium — 1 year"},
+        "price": {"ru": "250 000 сум",            "uz": "250 000 so'm (25$)", "en": "$25"},
         "days":  365,
         "type":  "premium",
     },
     "vip": {
-        "label": {"ru": "💎 VIP Premium — 1 год", "uz": "💎 VIP Premium — 1 yil"},
-        "price": {"ru": "3 000 000 сум",           "uz": "3 000 000 so'm"},
+        "label": {"ru": "💎 VIP Premium — 1 год", "uz": "💎 VIP Premium — 1 yil", "en": "💎 VIP Premium — 1 year"},
+        "price": {"ru": "3 000 000 сум",           "uz": "3 000 000 so'm (300$)",  "en": "$300"},
         "days":  365,
         "type":  "vip",
     },
 }
 
+_PREMIUM_LABELS = {
+    "1m":  {"ru": "⭐ Premium — 1 месяц  |  30 000 сум",       "uz": "⭐ Premium — 1 oy  |  30 000 so'm (3$)",       "en": "⭐ Premium — 1 month  |  $3"},
+    "3m":  {"ru": "⭐ Premium — 3 месяца  |  70 000 сум",      "uz": "⭐ Premium — 3 oy  |  70 000 so'm (7$)",       "en": "⭐ Premium — 3 months  |  $7"},
+    "1y":  {"ru": "⭐ Premium — 1 год  |  250 000 сум",        "uz": "⭐ Premium — 1 yil  |  250 000 so'm (25$)",    "en": "⭐ Premium — 1 year  |  $25"},
+    "vip": {"ru": "💎 VIP Premium — 1 год  |  3 000 000 сум", "uz": "💎 VIP Premium — 1 yil  |  3 000 000 so'm (300$)", "en": "💎 VIP Premium — 1 year  |  $300"},
+}
 
 def premium_kb(lang: str = "ru") -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup([
-        [InlineKeyboardButton(
-            "⭐ Premium — 1 месяц  |  30 000 сум" if lang == "ru" else "⭐ Premium — 1 oy  |  30 000 so'm",
-            callback_data="premium:1m"
-        )],
-        [InlineKeyboardButton(
-            "⭐ Premium — 3 месяца  |  70 000 сум" if lang == "ru" else "⭐ Premium — 3 oy  |  70 000 so'm",
-            callback_data="premium:3m"
-        )],
-        [InlineKeyboardButton(
-            "⭐ Premium — 1 год  |  250 000 сум" if lang == "ru" else "⭐ Premium — 1 yil  |  250 000 so'm",
-            callback_data="premium:1y"
-        )],
-        [InlineKeyboardButton(
-            "💎 VIP Premium — 1 год  |  3 000 000 сум" if lang == "ru" else "💎 VIP Premium — 1 yil  |  3 000 000 so'm",
-            callback_data="premium:vip"
-        )],
+        [InlineKeyboardButton(_PREMIUM_LABELS["1m"].get(lang,  _PREMIUM_LABELS["1m"]["ru"]),  callback_data="premium:1m")],
+        [InlineKeyboardButton(_PREMIUM_LABELS["3m"].get(lang,  _PREMIUM_LABELS["3m"]["ru"]),  callback_data="premium:3m")],
+        [InlineKeyboardButton(_PREMIUM_LABELS["1y"].get(lang,  _PREMIUM_LABELS["1y"]["ru"]),  callback_data="premium:1y")],
+        [InlineKeyboardButton(_PREMIUM_LABELS["vip"].get(lang, _PREMIUM_LABELS["vip"]["ru"]), callback_data="premium:vip")],
     ])
 
 
