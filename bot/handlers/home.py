@@ -35,10 +35,10 @@ BOOST_EVERY = 3
 FAVORITES_LIMIT_FREE = 10
 
 MENU_ALL = {
-    "👀 Смотреть анкеты", "👀 Anketalarni ko'rish",
-    "🔍 Поиск", "🔍 Qidiruv",
-    "⭐ Избранные", "⭐ Sevimlilar",
-    "🔗 Реферал", "🔗 Referal",
+    "👀 Смотреть анкеты", "👀 Anketalarni ko'rish", "👀 Browse Profiles",
+    "🔍 Поиск", "🔍 Qidiruv", "🔍 Search",
+    "⭐ Избранные", "⭐ Sevimlilar", "⭐ Favorites",
+    "🔗 Реферал", "🔗 Referal", "🔗 Referral",
 }
 
 
@@ -722,19 +722,19 @@ async def show_referral(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 def register_handlers(app: Application):
     app.add_handler(MessageHandler(
-        filters.Regex("^(👀 Смотреть анкеты|👀 Anketalarni ko'rish)$"),
+        filters.Regex("^(👀 Смотреть анкеты|👀 Anketalarni ko'rish|👀 Browse Profiles)$"),
         browse_profiles
     ))
     app.add_handler(MessageHandler(
-        filters.Regex("^(🔍 Поиск|🔍 Qidiruv)$"),
+        filters.Regex("^(🔍 Поиск|🔍 Qidiruv|🔍 Search)$"),
         search_menu
     ))
     app.add_handler(MessageHandler(
-        filters.Regex("^(⭐ Избранные|⭐ Sevimlilar)$"),
+        filters.Regex("^(⭐ Избранные|⭐ Sevimlilar|⭐ Favorites)$"),
         show_favorites
     ))
     app.add_handler(MessageHandler(
-        filters.Regex("^(🔗 Реферал|🔗 Referal)$"),
+        filters.Regex("^(🔗 Реферал|🔗 Referal|🔗 Referral)$"),
         show_referral
     ))
     app.add_handler(MessageHandler(
