@@ -217,7 +217,7 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                     f"<b>{liker.name}, {liker.age}</b> — {liker.city}\n\n"
                     f"Если лайкнешь в ответ — будет взаимная симпатия! 🎉"
                 )
-            view_label = "👀 Смотреть анкеты" if target_lang == "ru" else "👀 Anketalarni ko'rish"
+            view_label = {"ru": "👀 Смотреть анкеты", "uz": "👀 Anketalarni ko'rish"}.get(target_lang, "👀 Browse Profiles")
             notif_kb = InlineKeyboardMarkup([[
                 InlineKeyboardButton(view_label, callback_data=f"browse_liker:{liker_id}")
             ]])
