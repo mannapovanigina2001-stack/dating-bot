@@ -110,7 +110,7 @@ async def handle_language(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     lang = query.data.split(":")[1]
     ctx.user_data["lang"] = lang
     await UserService.update_user(update.effective_user.id, lang=lang)
-    key = "language_set_ru" if lang == "ru" else "language_set_uz"
+    key = {"ru": "language_set_ru", "uz": "language_set_uz", "en": "language_set_en"}.get(lang, "language_set_ru")
     await query.message.reply_text(
         t(key, lang),
         reply_markup=main_menu_kb(lang)
