@@ -19,7 +19,6 @@ from telegram import Update, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram.ext import Application, MessageHandler, CallbackQueryHandler, filters, ContextTypes
 from sqlalchemy import select, and_, func
 from database.models import User, Like, Favorite, Premium, Referral, Tag, user_tags, BlackList
-from bot.handlers.ваш_модуль import handle_pay_confirm
 from database.session import Session
 from bot.keyboards.main import (
     home_inline_kb, main_menu_kb, search_mode_kb, search_tags_kb, premium_kb,
