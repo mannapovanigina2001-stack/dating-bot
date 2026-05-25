@@ -130,30 +130,21 @@ async def handle_premium_plan(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     label = info.get("label", {}).get(lang, "")
     price = info.get("price", {}).get(lang, "")
     ctx.user_data["pending_plan"] = plan
-
-    if lang == "en":
-        text = (
-            f"💳 <b>Premium Payment — {label}</b>\n\n"
-            f"Amount: <b>{price}</b>\n\n"
-            f"Choose your payment method:\n\n"
-            f"💳 <b>Card (Uzbekistan):</b>\n<code>{CARD_NUMBER}</code>\n\n"
-            f"₿ <b>Bitcoin (BTC):</b>\n<code>bc1q43zu07n7mxzfv9235l0k2a39hnktgd8xt85gu5</code>\n\n"
-            f"⧫ <b>Ethereum (ETH):</b>\n<code>0xd4520a3a3290ebbdf608f4400a414e1117d4dbf7</code>\n\n"
-            f"⚠️ <b>Instructions:</b>\n"
-            f"1️⃣ Copy the address you want to pay to\n"
-            f"2️⃣ Send exactly <b>{price}</b>\n"
-            f"3️⃣ Take a screenshot of the transaction\n"
-            f"4️⃣ Press the button below and send the screenshot\n\n"
-            f"⏳ Activation within 15 minutes"
-        )
-    else:
-        text = t("premium_payment", lang, label=label, price=price, card=CARD_NUMBER)
-
     await query.message.reply_text(
-        text,
+        t("premium_payment", lang, label=label, price=price, card=CARD_NUMBER),
         parse_mode="HTML",
         reply_markup=payment_confirm_kb(plan, lang)
     )
+
+
+async def handle_pay_confirm(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    query = update.callback_query
+    await query.answer()
+    lang = await _get_lang(update.effective_user.id, ctx)
+    plan = query.data.split(":")[1]
+    ctx.user_data["waiting_receipt"] = plan
+    await query.message.reply_text(t("premium_awaiting_receipt", lang))
+
 
 async def handle_receipt_photo(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     if not ctx.user_data.get("waiting_receipt"):
@@ -765,7 +756,7 @@ def register_handlers(app: Application):
     app.add_handler(CallbackQueryHandler(handle_blacklist_remove, pattern="^unblacklist:"))
 
     # Справочник
-   async def show_help(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+    async def show_help(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         lang = await _get_lang(update.effective_user.id, ctx)
         try:
             await update.message.delete()
