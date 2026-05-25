@@ -7,9 +7,9 @@ from database.session import Session
 
 RESHOW_DAYS    = 1
 LIMIT_FREE     = 10
-LIMIT_REFERRAL = 20   # +10 за реферала
-LIMIT_PREMIUM  = 30   # +50 за Premium
-LIMIT_VIP      = 50   # VIP = те же 70 (бонус VIP — личка, не лимит)
+LIMIT_REFERRAL = 20
+LIMIT_PREMIUM  = 30
+LIMIT_VIP      = 50
 
 
 class MatchService:
@@ -42,8 +42,6 @@ class MatchService:
 
     @staticmethod
     async def _get_views_today(user_id: int, s) -> int:
-        """Считает уникальные профили просмотренные сегодня.
-        Один профиль сколько бы раз не показывался — считается как 1."""
         today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
         return (await s.execute(
             select(func.count(func.distinct(ProfileView.target_id))).where(
@@ -60,8 +58,6 @@ class MatchService:
 
     @staticmethod
     async def _get_blacklisted_ids(user_id: int, s) -> set:
-        """Возвращает ID пользователей, которых заблокировал user_id,
-        И тех, кто заблокировал user_id (взаимное скрытие)."""
         blocked_by_me = {row[0] for row in (await s.execute(
             select(BlackList.target_id).where(BlackList.user_id == user_id)
         )).fetchall()}
@@ -107,7 +103,6 @@ class MatchService:
                     User.age >= me.age_min,
                     User.age <= me.age_max,
                 ]
-                # Исключаем чёрный список всегда
                 if blacklisted_ids:
                     c.append(User.telegram_id.notin_(blacklisted_ids))
                 if exclude:
@@ -116,14 +111,12 @@ class MatchService:
                     c.append(User.gender == me.looking_for)
                 return c
 
-            # Уровень 1: исключаем лайкнутых + недавно просмотренных
             profile = (await s.execute(
                 select(User).options(selectinload(User.tags))
                 .where(and_(*conditions(liked_ids | recently_seen)))
                 .order_by(boost.desc(), func.random()).limit(1)
             )).scalar_one_or_none()
 
-            # Уровень 2: сбрасываем историю просмотров, исключаем только лайкнутых
             if not profile:
                 await s.execute(
                     update(ProfileView)
@@ -137,15 +130,12 @@ class MatchService:
                     .order_by(boost.desc(), func.random()).limit(1)
                 )).scalar_one_or_none()
 
-            # Уровень 3: показываем вообще всех (даже лайкнутых) — анкеты никогда не кончаются
-            # При уровне 3 не записываем просмотр чтобы не накручивать лимит
             if not profile:
                 profile = (await s.execute(
                     select(User).options(selectinload(User.tags))
                     .where(and_(*conditions(set())))
                     .order_by(boost.desc(), func.random()).limit(1)
                 )).scalar_one_or_none()
-                # Не записываем просмотр для уровня 3
                 return profile
 
             if profile:
@@ -171,19 +161,14 @@ class MatchService:
 
     @staticmethod
     async def add_like(from_id: int, to_id: int) -> bool:
-        """
-        Возвращает True если матч, False если просто лайк.
-        Возвращает None если уже лайкали (антиспам).
-        """
         async with Session() as s:
-            # Антиспам: проверяем, не лайкали ли уже
             existing = (await s.execute(
                 select(Like).where(
                     and_(Like.from_user_id == from_id, Like.to_user_id == to_id)
                 )
             )).scalar_one_or_none()
             if existing:
-                return None  # уже лайкнут
+                return None
 
             like = Like(from_user_id=from_id, to_user_id=to_id)
             s.add(like)
@@ -241,7 +226,6 @@ class MatchService:
 
     @staticmethod
     async def add_to_blacklist(user_id: int, target_id: int) -> bool:
-        """Добавить в чёрный список. Возвращает False если уже есть."""
         async with Session() as s:
             existing = (await s.execute(
                 select(BlackList).where(
@@ -353,8 +337,36 @@ class MatchService:
             return result.scalars().all()
 
     @staticmethod
+    async def search_by_age(
+        user_id: int,
+        age_min: int,
+        age_max: int,
+        limit: int = 10
+    ) -> List[User]:
+        """Поиск анкет по диапазону возраста."""
+        async with Session() as s:
+            blacklisted = await MatchService._get_blacklisted_ids(user_id, s)
+            conds = [
+                User.is_active == True,
+                User.ban_status == "active",
+                User.telegram_id != user_id,
+                User.age >= age_min,
+                User.age <= age_max,
+            ]
+            if blacklisted:
+                conds.append(User.telegram_id.notin_(blacklisted))
+
+            result = await s.execute(
+                select(User)
+                .options(selectinload(User.tags))
+                .where(and_(*conds))
+                .order_by(func.random())
+                .limit(limit)
+            )
+            return result.scalars().all()
+
+    @staticmethod
     async def save_search_age_filter(user_id: int, age_min: int, age_max: int):
-        """Сохраняет фильтр возраста для поиска пользователя."""
         async with Session() as s:
             user = await s.get(User, user_id)
             if user:
@@ -364,7 +376,6 @@ class MatchService:
 
     @staticmethod
     async def get_search_age_filter(user_id: int) -> tuple:
-        """Возвращает (age_min, age_max) для поиска. None если не задан."""
         async with Session() as s:
             user = await s.get(User, user_id)
             if not user:
