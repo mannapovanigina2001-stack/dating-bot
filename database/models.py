@@ -71,12 +71,12 @@ class Tag(Base):
     id       = Column(Integer,    primary_key=True, autoincrement=True)
     name     = Column(String(64), unique=True, nullable=False)
     name_uz  = Column(String(64), nullable=True)
+    name_en  = Column(String(64), nullable=True)   # ← добавить эту строку
     emoji    = Column(String(8),  nullable=True)
     category = Column(String(32), nullable=True)
 
     users = relationship("User", secondary=user_tags, back_populates="tags")
-
-
+    
 class Like(Base):
     __tablename__ = "likes"
 
