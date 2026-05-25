@@ -765,7 +765,7 @@ def register_handlers(app: Application):
     app.add_handler(CallbackQueryHandler(handle_blacklist_remove, pattern="^unblacklist:"))
 
     # Справочник
-    async def show_help(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
+   async def show_help(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         lang = await _get_lang(update.effective_user.id, ctx)
         try:
             await update.message.delete()
@@ -801,32 +801,32 @@ def register_handlers(app: Application):
                 "━━━━━━━━━━━━━━━━━━━━━\n"
                 "❓ Savollar uchun: /complaint"
             )
-            elif lang == "en":
-    text = (
-        "📖 <b>Help</b>\n\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "🔘 <b>What do the buttons do?</b>\n\n"
-        "👀 <b>Browse Profiles</b> — swipe through new profiles\n"
-        "🔍 <b>Search</b> — search by city or tag (Premium)\n"
-        "⭐ <b>Favorites</b> — saved profiles\n"
-        "🔗 <b>Referral</b> — invite friends and get bonuses\n"
-        "🚫 <b>Blacklist</b> — hide a user (Premium)\n\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "❤️ — like\n"
-        "👎 — skip\n"
-        "⭐ — add to favorites\n"
-        "✍️ — write directly\n"
-        "🚨 — report\n\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "💳 <b>Payment & refunds</b>\n\n"
-        "⚠️ After purchasing Premium <b>no refunds are possible</b>.\n\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "💎 <b>VIP Premium</b>\n\n"
-        "Once a month you can request a contact via favorites.\n"
-        "Price: $300/year\n\n"
-        "━━━━━━━━━━━━━━━━━━━━━\n"
-        "❓ Questions: /complaint"
-    )
+        elif lang == "en":
+            text = (
+                "📖 <b>Help</b>\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━\n"
+                "🔘 <b>What do the buttons do?</b>\n\n"
+                "👀 <b>Browse Profiles</b> — swipe through new profiles\n"
+                "🔍 <b>Search</b> — search by city or tag (Premium)\n"
+                "⭐ <b>Favorites</b> — saved profiles\n"
+                "🔗 <b>Referral</b> — invite friends and get bonuses\n"
+                "🚫 <b>Blacklist</b> — hide a user (Premium)\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━\n"
+                "❤️ — like\n"
+                "👎 — skip\n"
+                "⭐ — add to favorites\n"
+                "✍️ — write directly\n"
+                "🚨 — report\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━\n"
+                "💳 <b>Payment & refunds</b>\n\n"
+                "⚠️ After purchasing Premium <b>no refunds are possible</b>.\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━\n"
+                "💎 <b>VIP Premium</b>\n\n"
+                "Once a month you can request a contact via favorites.\n"
+                "Price: $300/year\n\n"
+                "━━━━━━━━━━━━━━━━━━━━━\n"
+                "❓ Questions: /complaint"
+            )
         else:
             text = (
                 "📖 <b>Справочник</b>\n\n"
