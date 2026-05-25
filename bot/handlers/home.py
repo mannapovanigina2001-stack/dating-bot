@@ -294,7 +294,7 @@ async def handle_age_filter_input(update: Update, ctx: ContextTypes.DEFAULT_TYPE
         parts = text.replace(" ", "").split("-")
         age_min = int(parts[0])
         age_max = int(parts[1])
-        if age_min < 14 or age_max > 99 or age_min > age_max:
+        if age_min < 18 or age_max > 99 or age_min > age_max:
             raise ValueError
     except Exception:
         err = (
@@ -306,19 +306,29 @@ async def handle_age_filter_input(update: Update, ctx: ContextTypes.DEFAULT_TYPE
         return True
 
     await MatchService.save_search_age_filter(user_id, age_min, age_max)
-    ok = (
-        f"✅ Фильтр возраста установлен: <b>{age_min}–{age_max}</b>"
+
+    users = await MatchService.search_by_age(user_id, age_min, age_max)
+
+    if not users:
+        no_result = (
+            f"😔 Анкет в возрасте <b>{age_min}–{age_max}</b> не найдено."
+            if lang == "ru" else
+            f"😔 <b>{age_min}–{age_max}</b> yoshdagi anketalar topilmadi."
+        )
+        await update.message.reply_text(no_result, parse_mode="HTML")
+        return True
+
+    found = (
+        f"✅ Найдено анкет: <b>{len(users)}</b> (возраст {age_min}–{age_max})"
         if lang == "ru" else
-        f"✅ Yosh filtri o'rnatildi: <b>{age_min}–{age_max}</b>"
+        f"✅ Topildi: <b>{len(users)}</b> ta anketa (yosh {age_min}–{age_max})"
     )
-    await update.message.reply_text(
-        ok,
-        parse_mode="HTML",
-        reply_markup=_search_menu_kb(lang, age_min, age_max)
-    )
+    await update.message.reply_text(found, parse_mode="HTML")
+
+    for u in users:
+        await _send_search_result(update.message, u, lang, user_id)
+
     return True
-
-
 async def handle_search_tag(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     query = update.callback_query
     await query.answer()
