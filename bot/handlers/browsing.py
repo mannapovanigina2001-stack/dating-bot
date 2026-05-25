@@ -5,9 +5,13 @@ from bot.services.user_service import UserService
 from bot.services.match_service import MatchService, LIMIT_FREE, LIMIT_REFERRAL, LIMIT_PREMIUM
 from bot.modules.mutual_interests import MutualInterestsModule
 from bot.modules.rating import RatingModule
+from bot.modules.tags import TagModule
 from bot.keyboards.main import like_skip_kb, report_reason_kb, home_inline_kb
 from bot.i18n import t
 from config import settings
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 async def _get_lang(user_id: int, ctx) -> str:
@@ -39,7 +43,6 @@ async def show_next_profile(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         if profile and profile.is_active and profile.ban_status == "active":
             await _send_profile(message, profile, lang)
             return
-        # Профиль удалён — берём следующего
         return await show_next_profile(update, ctx)
 
     ctx.user_data["from_pending"] = False
@@ -62,6 +65,20 @@ async def show_next_profile(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                 f"⭐  Premium oling\n"
                 f"     → kuniga <b>{LIMIT_PREMIUM} ta</b> anketa\n\n"
                 "🌅  Ertaga qaytib keling!"
+            )
+        elif lang == "en":
+            text = (
+                "━━━━━━━━━━━━━━━━━━━━━\n"
+                "⏳  <b>Daily limit reached</b>\n"
+                "━━━━━━━━━━━━━━━━━━━━━\n\n"
+                f"Today you viewed <b>{info['used']}</b> profiles.\n"
+                f"Your limit: <b>{info['limit']} profiles/day</b>\n\n"
+                "🔓 <b>How to increase your limit:</b>\n\n"
+                f"👥  Invite a friend\n"
+                f"     → <b>{LIMIT_REFERRAL} profiles/day</b>\n\n"
+                f"⭐  Get Premium\n"
+                f"     → <b>{LIMIT_PREMIUM} profiles/day</b>\n\n"
+                "🌅  Come back tomorrow!"
             )
         else:
             text = (
@@ -94,8 +111,10 @@ async def show_next_profile(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 async def _send_profile(message, profile, lang: str):
     boost_badge = "🚀 " if (profile.boost_until and profile.boost_until > datetime.now()) else ""
     verified    = t("browse_verified", lang) if profile.verification_status == "verified" else ""
-    tags_text   = ", ".join(
-        f"{tag.emoji or ''}{tag.name_uz if lang == 'uz' and tag.name_uz else tag.name}"
+
+    # Показываем теги на нужном языке
+    tags_text = ", ".join(
+        f"{tag.emoji or ''}{TagModule.get_tag_name(tag, lang)}"
         for tag in profile.tags
     ) or t("browse_no_tags", lang)
 
@@ -111,8 +130,16 @@ async def _send_profile(message, profile, lang: str):
     kb = like_skip_kb(profile.telegram_id, lang)
 
     if profile.photo_file_id:
-        await message.reply_photo(photo=profile.photo_file_id, caption=caption,
-                                  parse_mode="HTML", reply_markup=kb)
+        try:
+            await message.reply_photo(
+                photo=profile.photo_file_id,
+                caption=caption,
+                parse_mode="HTML",
+                reply_markup=kb
+            )
+        except Exception as e:
+            logger.warning(f"Не удалось отправить фото профиля {profile.telegram_id}: {e}")
+            await message.reply_text(caption, parse_mode="HTML", reply_markup=kb)
     else:
         await message.reply_text(caption, parse_mode="HTML", reply_markup=kb)
 
@@ -123,6 +150,11 @@ def _build_match_caption(person, viewer_lang: str, common_tags_text: str) -> str
         verified  = "✅ Верифицирован"
         write_lbl = "Написать"
         no_user   = "Нет username"
+    elif viewer_lang == "en":
+        header    = "🎉 <b>It's a match!</b>"
+        verified  = "✅ Verified"
+        write_lbl = "Write"
+        no_user   = "No username"
     else:
         header    = "🎉 <b>O'zaro yoqish!</b>"
         verified  = "✅ Tasdiqlangan"
@@ -144,19 +176,17 @@ def _build_match_caption(person, viewer_lang: str, common_tags_text: str) -> str
 
 
 def _match_write_kb(person, viewer_lang: str) -> InlineKeyboardMarkup:
-    label = "✍️ Написать" if viewer_lang == "ru" else "✍️ Yozish"
+    label = {"ru": "✍️ Написать", "en": "✍️ Write", "uz": "✍️ Yozish"}.get(viewer_lang, "✍️ Write")
     return InlineKeyboardMarkup([
         [InlineKeyboardButton(label, url=f"tg://user?id={person.telegram_id}")]
     ])
 
 
 async def _after_action(update: Update, ctx: ContextTypes.DEFAULT_TYPE, lang: str):
-    """После лайка/дизлайка — следующий из очереди или главное меню."""
     from_pending = ctx.user_data.get("from_pending", False)
     pending      = ctx.user_data.get("pending_likers", [])
 
     if from_pending and not pending:
-        # Очередь лайкнувших закончилась → главное меню
         message = update.callback_query.message if update.callback_query else update.message
         await message.reply_text(
             t("home_text", lang),
@@ -170,7 +200,6 @@ async def _after_action(update: Update, ctx: ContextTypes.DEFAULT_TYPE, lang: st
 
 
 async def handle_browse_liker(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    """Кнопка из уведомления о лайке — показывает профиль лайкнувшего."""
     query    = update.callback_query
     await query.answer()
     liker_id = int(query.data.split(":")[1])
@@ -193,7 +222,11 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     is_match = await MatchService.add_like(liker_id, target_id)
 
     if is_match is None:
-        already = "Вы уже лайкнули этого пользователя." if lang == "ru" else "Siz bu foydalanuvchini allaqachon layklagansiz."
+        already = {
+            "ru": "Вы уже лайкнули этого пользователя.",
+            "uz": "Siz bu foydalanuvchini allaqachon layklagansiz.",
+            "en": "You already liked this user.",
+        }.get(lang, "Already liked.")
         await query.answer(already, show_alert=False)
         await _after_action(update, ctx, lang)
         return
@@ -211,13 +244,23 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                     f"<b>{liker.name}, {liker.age}</b> — {liker.city}\n\n"
                     f"Agar siz ham uni yoqtirsangiz — o'zaro yoqish bo'ladi! 🎉"
                 )
+            elif target_lang == "en":
+                notif_text = (
+                    f"❤️ <b>Someone liked you!</b>\n\n"
+                    f"<b>{liker.name}, {liker.age}</b> — {liker.city}\n\n"
+                    f"Like back and it's a match! 🎉"
+                )
             else:
                 notif_text = (
                     f"❤️ <b>Кто-то лайкнул тебя!</b>\n\n"
                     f"<b>{liker.name}, {liker.age}</b> — {liker.city}\n\n"
                     f"Если лайкнешь в ответ — будет взаимная симпатия! 🎉"
                 )
-            view_label = {"ru": "👀 Смотреть анкеты", "uz": "👀 Anketalarni ko'rish"}.get(target_lang, "👀 Browse Profiles")
+            view_label = {
+                "ru": "👀 Смотреть анкеты",
+                "uz": "👀 Anketalarni ko'rish",
+                "en": "👀 Browse Profiles",
+            }.get(target_lang, "👀 Browse Profiles")
             notif_kb = InlineKeyboardMarkup([[
                 InlineKeyboardButton(view_label, callback_data=f"browse_liker:{liker_id}")
             ]])
@@ -229,8 +272,7 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
                     await ctx.bot.send_message(target_id, notif_text,
                                                parse_mode="HTML", reply_markup=notif_kb)
             except Exception as e:
-                import logging
-                logging.getLogger(__name__).warning(f"Уведомление о лайке {target_id}: {e}")
+                logger.warning(f"Уведомление о лайке {target_id}: {e}")
 
     if is_match:
         liker  = await UserService.get_user(liker_id)
@@ -240,7 +282,7 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         def common_text(l):
             if not common:
                 return ""
-            return t("match_common_tags", l, tags=", ".join(f"{t.emoji or ''}{t.name}" for t in common))
+            return t("match_common_tags", l, tags=", ".join(f"{tg.emoji or ''}{tg.name}" for tg in common))
 
         liker_lang  = lang
         target_lang = target.lang or "ru"
@@ -254,8 +296,7 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
             else:
                 await ctx.bot.send_message(liker_id, caption, parse_mode="HTML", reply_markup=kb)
         except Exception as e:
-            import logging
-            logging.getLogger(__name__).warning(f"Матч лайкнувшему {liker_id}: {e}")
+            logger.warning(f"Матч лайкнувшему {liker_id}: {e}")
 
         try:
             kb = _match_write_kb(liker, target_lang)
@@ -266,8 +307,7 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
             else:
                 await ctx.bot.send_message(target_id, caption, parse_mode="HTML", reply_markup=kb)
         except Exception as e:
-            import logging
-            logging.getLogger(__name__).warning(f"Матч target {target_id}: {e}")
+            logger.warning(f"Матч target {target_id}: {e}")
 
         await RatingModule.add_points(liker_id,  "match", 5)
         await RatingModule.add_points(target_id, "match", 5)
