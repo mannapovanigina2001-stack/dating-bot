@@ -11,7 +11,6 @@
 - inline: fav:* / fav_remove:* / fav_nav:*
 - inline: lang:* — смена языка
 - inline: blacklist:* / unblacklist:*
-- Кнопка "Написать" через tg://user?id=... deep link
 """
 
 from datetime import datetime
@@ -214,7 +213,6 @@ async def browse_profiles(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 # ══════════════════════════════════════════════════════════
 
 def _search_menu_kb(lang: str, age_min=None, age_max=None) -> InlineKeyboardMarkup:
-    """Клавиатура поиска с кнопкой фильтра возраста."""
     age_label = (
         f"🎂 {age_min}–{age_max}" if age_min and age_max
         else ("🎂 Возраст" if lang == "ru" else "🎂 Yosh")
@@ -258,7 +256,6 @@ async def handle_search_mode(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     mode = query.data.split(":")[1]
 
     if mode == "age_filter":
-        # Запрашиваем ввод возраста
         ctx.user_data["waiting_age_filter"] = True
         text = (
             "🎂 Введите диапазон возраста в формате: <b>18-35</b>\n\n"
@@ -283,7 +280,6 @@ async def handle_search_mode(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 
 async def handle_age_filter_input(update: Update, ctx: ContextTypes.DEFAULT_TYPE) -> bool:
-    """Обрабатывает ввод фильтра возраста. Возвращает True если обработал."""
     if not ctx.user_data.get("waiting_age_filter"):
         return False
     if update.message.text in MENU_ALL:
@@ -383,21 +379,17 @@ async def handle_city_input(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 async def _send_search_result(msg, u: User, lang: str, viewer_id: int):
     """
-    Отправляет карточку анкеты с кнопками лайк/пропустить/написать/в чёрный список.
-    Кнопка 'Написать' — deep link tg://user?id=USER_ID (работает без username).
+    Отправляет карточку анкеты с кнопками лайк/пропустить/в чёрный список.
     """
     verified = t("browse_verified", lang) if u.verification_status == "verified" else ""
     caption = f"<b>{u.name}, {u.age}</b> — {u.city}\n{verified}\n\n{u.about or ''}"
 
-    # Кнопка "Написать" через deep link
-    write_label = "✍️ Написать" if lang == "ru" else "✍️ Yozish"
-    bl_label    = "🚫 В ЧС"     if lang == "ru" else "🚫 Qora ro'yxat"
+    bl_label = "🚫 В ЧС" if lang == "ru" else "🚫 Qora ro'yxat"
 
     kb = InlineKeyboardMarkup([
         [
             InlineKeyboardButton("❤️", callback_data=f"like:{u.telegram_id}"),
             InlineKeyboardButton("👎", callback_data=f"skip:{u.telegram_id}"),
-            InlineKeyboardButton(write_label, url=f"tg://user?id={u.telegram_id}"),
         ],
         [
             InlineKeyboardButton(bl_label, callback_data=f"blacklist:{u.telegram_id}"),
@@ -599,7 +591,6 @@ async def handle_fav_remove(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 # ══════════════════════════════════════════════════════════
 
 async def handle_blacklist_add(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    """Добавить пользователя в чёрный список (только Premium)."""
     query = update.callback_query
     await query.answer()
     user_id   = update.effective_user.id
@@ -623,7 +614,6 @@ async def handle_blacklist_add(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 
 async def handle_blacklist_remove(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    """Убрать пользователя из чёрного списка."""
     query = update.callback_query
     await query.answer()
     user_id   = update.effective_user.id
@@ -640,7 +630,6 @@ async def handle_blacklist_remove(update: Update, ctx: ContextTypes.DEFAULT_TYPE
 
 
 async def show_blacklist(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    """Показать чёрный список пользователя."""
     user_id = update.effective_user.id
     lang = await _get_lang(user_id, ctx)
 
@@ -755,7 +744,6 @@ def register_handlers(app: Application):
     app.add_handler(CallbackQueryHandler(handle_blacklist_add,  pattern="^blacklist:"))
     app.add_handler(CallbackQueryHandler(handle_blacklist_remove, pattern="^unblacklist:"))
 
-    # Справочник
     async def show_help(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         lang = await _get_lang(update.effective_user.id, ctx)
         try:
@@ -776,7 +764,6 @@ def register_handlers(app: Application):
                 "❤️ — layk qo'yish\n"
                 "👎 — o'tkazib yuborish\n"
                 "⭐ — sevimlilarga qo'shish\n"
-                "✍️ — to'g'ridan-to'g'ri yozish\n"
                 "🚨 — shikoyat yuborish\n\n"
                 "━━━━━━━━━━━━━━━━━━━━━\n"
                 "💳 <b>To'lov va qaytarish</b>\n\n"
@@ -806,7 +793,6 @@ def register_handlers(app: Application):
                 "❤️ — like\n"
                 "👎 — skip\n"
                 "⭐ — add to favorites\n"
-                "✍️ — write directly\n"
                 "🚨 — report\n\n"
                 "━━━━━━━━━━━━━━━━━━━━━\n"
                 "💳 <b>Payment & refunds</b>\n\n"
@@ -832,7 +818,6 @@ def register_handlers(app: Application):
                 "❤️ — поставить лайк\n"
                 "👎 — пропустить анкету\n"
                 "⭐ — добавить в избранное\n"
-                "✍️ — написать напрямую\n"
                 "🚨 — пожаловаться на пользователя\n\n"
                 "━━━━━━━━━━━━━━━━━━━━━\n"
                 "💳 <b>Оплата и возврат</b>\n\n"
@@ -868,13 +853,10 @@ def register_handlers(app: Application):
             return
         if ctx.user_data.get("admin_mode"):
             return
-        # Фильтр возраста — проверяем первым
         if await handle_age_filter_input(update, ctx):
             return
         await handle_city_input(update, ctx)
 
-    # group=2 — ниже profile.py (group=1), чтобы редактирование профиля
-    # обрабатывалось раньше чем city/age-filter поиска
     app.add_handler(MessageHandler(
         filters.TEXT & ~filters.COMMAND,
         _text_guard
