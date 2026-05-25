@@ -112,6 +112,7 @@ async def _send_profile(message, profile, lang: str):
     boost_badge = "🚀 " if (profile.boost_until and profile.boost_until > datetime.now()) else ""
     verified    = t("browse_verified", lang) if profile.verification_status == "verified" else ""
 
+    # Показываем теги на нужном языке
     tags_text = ", ".join(
         f"{tag.emoji or ''}{TagModule.get_tag_name(tag, lang)}"
         for tag in profile.tags
@@ -145,23 +146,40 @@ async def _send_profile(message, profile, lang: str):
 
 def _build_match_caption(person, viewer_lang: str, common_tags_text: str) -> str:
     if viewer_lang == "ru":
-        header   = "🎉 <b>Взаимная симпатия!</b>"
-        verified = "✅ Верифицирован"
+        header    = "🎉 <b>Взаимная симпатия!</b>"
+        verified  = "✅ Верифицирован"
+        write_lbl = "Написать"
+        no_user   = "Нет username"
     elif viewer_lang == "en":
-        header   = "🎉 <b>It's a match!</b>"
-        verified = "✅ Verified"
+        header    = "🎉 <b>It's a match!</b>"
+        verified  = "✅ Verified"
+        write_lbl = "Write"
+        no_user   = "No username"
     else:
-        header   = "🎉 <b>O'zaro yoqish!</b>"
-        verified = "✅ Tasdiqlangan"
+        header    = "🎉 <b>O'zaro yoqish!</b>"
+        verified  = "✅ Tasdiqlangan"
+        write_lbl = "Yozish"
+        no_user   = "Username yo'q"
 
     lines = [header, "", f"<b>{person.name}, {person.age}</b> — {person.city}",
              person.about or "", ""]
     if person.verification_status == "verified":
         lines.append(verified)
+    if person.username:
+        lines.append(f"{write_lbl}: @{person.username}")
+    else:
+        lines.append(no_user)
     if common_tags_text:
         lines.append("")
         lines.append(common_tags_text)
     return "\n".join(lines)
+
+
+def _match_write_kb(person, viewer_lang: str) -> InlineKeyboardMarkup:
+    label = {"ru": "✍️ Написать", "en": "✍️ Write", "uz": "✍️ Yozish"}.get(viewer_lang, "✍️ Write")
+    return InlineKeyboardMarkup([
+        [InlineKeyboardButton(label, url=f"tg://user?id={person.telegram_id}")]
+    ])
 
 
 async def _after_action(update: Update, ctx: ContextTypes.DEFAULT_TYPE, lang: str):
@@ -270,22 +288,24 @@ async def handle_like(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         target_lang = target.lang or "ru"
 
         try:
+            kb = _match_write_kb(target, liker_lang)
             caption = _build_match_caption(target, liker_lang, common_text(liker_lang))
             if target.photo_file_id:
                 await ctx.bot.send_photo(chat_id=liker_id, photo=target.photo_file_id,
-                                         caption=caption, parse_mode="HTML")
+                                         caption=caption, parse_mode="HTML", reply_markup=kb)
             else:
-                await ctx.bot.send_message(liker_id, caption, parse_mode="HTML")
+                await ctx.bot.send_message(liker_id, caption, parse_mode="HTML", reply_markup=kb)
         except Exception as e:
             logger.warning(f"Матч лайкнувшему {liker_id}: {e}")
 
         try:
+            kb = _match_write_kb(liker, target_lang)
             caption = _build_match_caption(liker, target_lang, common_text(target_lang))
             if liker.photo_file_id:
                 await ctx.bot.send_photo(chat_id=target_id, photo=liker.photo_file_id,
-                                         caption=caption, parse_mode="HTML")
+                                         caption=caption, parse_mode="HTML", reply_markup=kb)
             else:
-                await ctx.bot.send_message(target_id, caption, parse_mode="HTML")
+                await ctx.bot.send_message(target_id, caption, parse_mode="HTML", reply_markup=kb)
         except Exception as e:
             logger.warning(f"Матч target {target_id}: {e}")
 
