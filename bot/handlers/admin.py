@@ -8,7 +8,7 @@ from telegram.ext import (
     MessageHandler, filters, ContextTypes
 )
 from telegram.error import Forbidden
-from sqlalchemy import select, func
+from sqlalchemy import select, func, text
 
 from database.session import get_session
 from database.models import User, Like, Premium, Referral
@@ -33,6 +33,7 @@ def admin_main_kb():
         [InlineKeyboardButton("📩 Написать юзеру", callback_data="adm:send_user")],
         [InlineKeyboardButton("🔎 Поиск",         callback_data="adm:search")],
         [InlineKeyboardButton("🚨 Жалобы",        callback_data="adm:reports")],
+        [InlineKeyboardButton("🛠 Миграция БД",   callback_data="adm:migrate")],
         [InlineKeyboardButton("🚪 Выйти",         callback_data="adm:exit")],
     ])
 
@@ -111,9 +112,38 @@ async def handle_admin_menu(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         await query.message.reply_text("Введи ID пользователя:")
     elif action == "reports":
         await show_reports(query)
+    elif action == "migrate":
+        await run_migrations(query)
     elif action == "exit":
         ctx.user_data.clear()
         await query.message.edit_text("🚪 Вышли из админки")
+
+
+async def run_migrations(query):
+    """Запускает все необходимые миграции БД."""
+    results = []
+    async with get_session() as s:
+        try:
+            await s.execute(
+                text("ALTER TABLE tags ADD COLUMN IF NOT EXISTS name_en VARCHAR(64)")
+            )
+            await s.commit()
+            results.append("✅ name_en добавлен в tags")
+        except Exception as e:
+            results.append(f"⚠️ name_en: {e}")
+
+    # После миграции — обновляем переводы тегов
+    try:
+        from bot.modules.tags import TagModule
+        await TagModule.seed_tags()
+        results.append("✅ Теги обновлены (переводы uz/en)")
+    except Exception as e:
+        results.append(f"⚠️ seed_tags: {e}")
+
+    await query.message.reply_text(
+        "🛠 <b>Результат миграций:</b>\n\n" + "\n".join(results),
+        parse_mode="HTML"
+    )
 
 
 async def show_stats(query):
