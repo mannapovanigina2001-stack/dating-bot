@@ -33,7 +33,6 @@ class User(Base):
     age_min       = Column(Integer,    default=14)
     age_max       = Column(Integer,    default=99)
 
-    # Фильтр возраста в поиске (Premium) — отдельно от age_min/age_max в browse
     search_age_min = Column(Integer, nullable=True)
     search_age_max = Column(Integer, nullable=True)
 
@@ -51,7 +50,6 @@ class User(Base):
     boost_until   = Column(DateTime, nullable=True)
     referral_code = Column(String(32), unique=True, nullable=True)
 
-    # VIP: раз в месяц можно запросить личку через избранное
     vip_contact_used = Column(DateTime, nullable=True)
 
     tags           = relationship("Tag",        secondary=user_tags, back_populates="users")
@@ -71,12 +69,13 @@ class Tag(Base):
     id       = Column(Integer,    primary_key=True, autoincrement=True)
     name     = Column(String(64), unique=True, nullable=False)
     name_uz  = Column(String(64), nullable=True)
-    name_en  = Column(String(64), nullable=True)   # ← добавить эту строку
+    name_en  = Column(String(64), nullable=True)
     emoji    = Column(String(8),  nullable=True)
     category = Column(String(32), nullable=True)
 
     users = relationship("User", secondary=user_tags, back_populates="tags")
-    
+
+
 class Like(Base):
     __tablename__ = "likes"
 
@@ -136,7 +135,6 @@ class Premium(Base):
 
 
 class VipPremium(Base):
-    """VIP Premium — 3 000 000 сум/год. Даёт одну личку в месяц через избранное."""
     __tablename__ = "vip_premium"
 
     id         = Column(Integer,    primary_key=True, autoincrement=True)
@@ -173,11 +171,6 @@ class Referral(Base):
 
 
 class BlackList(Base):
-    """
-    Чёрный список (только Premium).
-    Пользователь user_id блокирует target_id —
-    они больше не будут показываться друг другу в ленте и поиске.
-    """
     __tablename__ = "blacklist"
 
     id         = Column(Integer,    primary_key=True, autoincrement=True)
