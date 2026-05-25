@@ -14,8 +14,8 @@ MENU_BUTTONS = {
     "👀 Смотреть анкеты", "👀 Anketalarni ko'rish", "👀 Browse Profiles",
     "🔍 Поиск", "🔍 Qidiruv", "🔍 Search",
     "⭐ Избранные", "⭐ Sevimlilar", "⭐ Favorites",
-    "🔗 Реферал", "🔗 Referal",
-    "👤 Мой профиль", "👤 Mening anketam",
+    "🔗 Реферал", "🔗 Referal", "🔗 Referral",
+    "👤 Мой профиль", "👤 Mening anketam", "👤 My Profile",
 }
 
 
@@ -36,7 +36,7 @@ def _profile_text(user, lang: str) -> str:
     }
     verified  = ver_map.get(user.verification_status, "")
     tags_text = ", ".join(
-        f"{tag.emoji or ''}{tag.name_uz if lang == 'uz' and tag.name_uz else tag.name}"
+        f"{tag.emoji or ''}{TagModule.get_tag_name(tag, lang)}"
         for tag in user.tags
     ) or t("profile_no_tags", lang)
 
@@ -70,12 +70,15 @@ async def show_profile(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
     kb = profile_actions_kb(lang, is_active=user.is_active)
     if user.photo_file_id:
-        await message.reply_photo(
-            photo=user.photo_file_id,
-            caption=text,
-            parse_mode="HTML",
-            reply_markup=kb
-        )
+        try:
+            await message.reply_photo(
+                photo=user.photo_file_id,
+                caption=text,
+                parse_mode="HTML",
+                reply_markup=kb
+            )
+        except Exception:
+            await message.reply_text(text, parse_mode="HTML", reply_markup=kb)
     else:
         await message.reply_text(text, parse_mode="HTML", reply_markup=kb)
 
@@ -102,12 +105,15 @@ async def handle_profile_action(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
         from bot.keyboards.main import like_skip_kb
         text = _profile_text(user, lang)
         if user.photo_file_id:
-            await query.message.reply_photo(
-                photo=user.photo_file_id,
-                caption=text,
-                parse_mode="HTML",
-                reply_markup=like_skip_kb(user_id, lang)
-            )
+            try:
+                await query.message.reply_photo(
+                    photo=user.photo_file_id,
+                    caption=text,
+                    parse_mode="HTML",
+                    reply_markup=like_skip_kb(user_id, lang)
+                )
+            except Exception:
+                await query.message.reply_text(text, parse_mode="HTML")
         else:
             await query.message.reply_text(text, parse_mode="HTML")
 
@@ -236,8 +242,6 @@ async def handle_edit_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
     text = update.message.text.strip()
 
-    # Если пользователь нажал кнопку меню пока был в режиме редактирования —
-    # сбрасываем edit_field и не сохраняем
     if text in MENU_BUTTONS:
         ctx.user_data.pop("edit_field", None)
         return
@@ -265,7 +269,7 @@ async def handle_edit_text(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 def register_handlers(app: Application):
     app.add_handler(MessageHandler(
-        filters.Regex("^(👤 Мой профиль|👤 Mening anketam)$"),
+        filters.Regex("^(👤 Мой профиль|👤 Mening anketam|👤 My Profile)$"),
         show_profile
     ))
 
@@ -275,8 +279,6 @@ def register_handlers(app: Application):
     app.add_handler(CallbackQueryHandler(handle_edit_tags_done,  pattern="^tags:done$"))
     app.add_handler(CallbackQueryHandler(handle_edit_looking,    pattern="^looking:"))
 
-    # Группа 1 — выше приоритетом чем home.py (group=2)
-    # Срабатывает ТОЛЬКО когда edit_field активен
     app.add_handler(
         MessageHandler(filters.TEXT & ~filters.COMMAND, handle_edit_text),
         group=1
